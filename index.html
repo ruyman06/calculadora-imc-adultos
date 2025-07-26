@@ -13,11 +13,12 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de IMC Gratis – Índice de Masa Corporal para Adultos</title>
+    <title>Calculadora de IMC para Adultos</title>
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon-32x32.png" type="image/png">
     <link rel="canonical" href="https://calculadoraimc.es/" />
+    <link rel="apple-touch-icon" href="/favicon-32x32.png">
     
     <meta name="description" content="Calculadora de IMC online y gratis. Descubre si tienes un peso saludable según tu altura, edad y sexo. Rápida, precisa y sin registros.">
     <meta name="keywords" content="IMC, calculadora IMC, índice de masa corporal, peso ideal, salud, nutrición, calcular IMC, IMC por edad, IMC por sexo, IMC adultos, calculadora peso">
@@ -40,9 +41,18 @@
 </head>
     
 <body>
-    <div class="title">
-            <h1><span aria-hidden="true">❤️</span>Calculadora de IMC Online</h1>
-    </div>
+    <header class="header">
+        <h1><span aria-hidden="true">❤️</span>Calculadora de IMC para adultos</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="#">Incio</a></li>
+                <li><a href="#que-es-imc">Qué es el IMC</a></li>
+                <li><a href="#tabla-imc">Tabla IMC</a></li>
+                <li><a href="#">Consejos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
     
     <main class="container">
         <p class="introduccion">
@@ -69,7 +79,7 @@
 
         <div id="resultado" class="resultado"></div>
 
-        <h2>¿Qué es el IMC?</h2>
+        <h2 id="que-es-imc">¿Qué es el IMC?</h2>
         <p class="explicacion">El Índice de Masa Corporal (IMC) es una medida que relaciona el peso y la altura de una persona para estimar si tiene un peso saludable. Aunque no mide directamente la grasa corporal, es una herramienta útil para evaluar riesgos relacionados con el peso.</p>
 
         <h3>Limitaciones del IMC</h3>
@@ -80,7 +90,7 @@
         </ul>
 
 
-        <h2>Tabla de interpretación</h2>
+        <h2 id="tabla-imc">Tabla de interpretación</h2>
         <table>
             <tr> 
                 <th>IMC (kg/m²)</th>
@@ -117,7 +127,7 @@
         </div>
 
         <div class="aditional-text">
-            <h2>¿Cuál es el peso ideal según mi altura?</h2>
+            <h2>¿Cuál es el peso ideal para adultos según la altura?</h2>
             <p class="ideal">No hay un peso "ideal" exacto, pero el IMC te da un rango saludable. Por ejemplo, para alguien que mide 1.70 m, un peso entre 53.5 y 72 kg estaría en el rango normal.</p>
 
             <h2>¿Cuál debería ser mi IMC?</h2>
@@ -131,7 +141,7 @@
         <p>
             <a href="aviso-legal.html">Aviso legal</a> | 
             <a href="politica-privacidad.html">Política de privacidad</a> | 
-            <a href="mailto:ruymanbarbuzano200@gmail.com">Contacto</a>
+            <a href="mailto:ruymanbarbuzano200@gmail.com" id="contacto">Contacto</a>
         </p>
     </footer>
 
