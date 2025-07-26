@@ -9,7 +9,7 @@ body {
     font-weight: 500;
 }
 
-body, div, h1, h2, p, select, form, label, input, table {
+body, div, h1, h2, p, select, form, label, input, table, details, summary {
     box-sizing: border-box;
 }
 
@@ -24,6 +24,7 @@ body, div, h1, h2, p, select, form, label, input, table {
     box-shadow: 0 0 15px #0005;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .nav__list li {
@@ -55,11 +56,23 @@ h1 {
     display: inline;
 }
 
-.introduccion, .explicacion, .ideal, .respuesta {
+.introduccion {
+    width: 80%;
+    text-wrap: balance;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.explicacion, .ideal, .respuesta, .limitaciones, .consejos--text {
     width: 80%;
     text-wrap: balance;
     margin-bottom: 40px;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.limitaciones {
+    margin: 0;
+    margin-top: 10px;
 }
 
 #action-form {
@@ -182,6 +195,26 @@ h3 {
 
 li {
     margin: 10px 0;
+}
+
+details {
+    padding: 10px;
+    border: 2px solid #DCDCDC;
+    min-width: 200px;
+    max-width: 700px;
+    width: 50%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+summary {
+    font-weight: bold;
+    background: transparent;
+    padding: 10px 5px;
+}
+
+summary:hover {
+    cursor: pointer;
 }
 
 .footer {
