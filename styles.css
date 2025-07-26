@@ -239,6 +239,9 @@ summary:hover {
 }
 
 @media (max-width: 600px) {
+    html {
+    scroll-padding-top: 250px;
+    }
     .header {
         padding: 1rem;
     }
