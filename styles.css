@@ -86,6 +86,10 @@ h1 {
     margin-top: 10px;
 }
 
+.calculadora--title {
+    margin-top: 0;
+}
+
 label {
     font-size: 18px;
     color: #212121;
