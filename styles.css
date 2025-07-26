@@ -269,6 +269,11 @@ summary:hover {
         margin: 0;
         text-wrap: balance;
     }
+    
+    details {
+        width: 100%;
+        padding: 15px;
+    }
 
     table, th, td {
         font-size: 0.9rem;
