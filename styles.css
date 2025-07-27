@@ -63,16 +63,24 @@ h1 {
     margin-top: 5px;
 }
 
-.explicacion, .ideal, .respuesta, .limitaciones, .consejos--text {
+.explicacion, .ideal, .respuesta, .limitaciones, .consejos--text, .calculo--text, .consecuencias--text {
     width: 80%;
     text-wrap: balance;
     margin-bottom: 40px;
     margin-top: 10px;
 }
 
+.respuesta {
+    margin-bottom: 0;
+}
+
 .limitaciones {
     margin: 0;
     margin-top: 10px;
+}
+
+.calculo {
+    margin-top: 20px;
 }
 
 #action-form {
@@ -202,6 +210,10 @@ li {
     margin: 10px 0;
 }
 
+.consejos {
+    margin-top: 10px;
+}
+
 details {
     padding: 10px;
     border: 2px solid #DCDCDC;
@@ -220,6 +232,10 @@ summary {
 
 summary:hover {
     cursor: pointer;
+}
+
+.consecuencias {
+    margin-top: 40px;
 }
 
 .footer {
