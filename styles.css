@@ -29,6 +29,7 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
 .nav__list li {
     display: inline-block;
     margin-right: 25px;
+    border-radius: 6px;
 }
 
 .nav__list li a{
