@@ -82,6 +82,16 @@ h1 {
     max-width: 90%;
 }
 
+.explicacion--2 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.consecuencias--text--2 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
 .respuesta {
     margin-bottom: 0;
 }
@@ -306,6 +316,8 @@ h3 {
 
 li {
     margin: 10px 0;
+    text-wrap: balance;
+    max-width: 90%;
 }
 
 .consejos {
