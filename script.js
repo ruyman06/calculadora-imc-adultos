@@ -19,7 +19,7 @@ document.getElementById('action-form').addEventListener('submit', function (e) {
 
     if (imc < 18.5) {
         clasificacion = 'Bajo peso';
-        claseCSS = 'normal'; // puedes usar una clase específica si quieres otro color
+        claseCSS = 'bajopeso'; 
     } else if (imc < 25) {
         clasificacion = 'Normal';
         claseCSS = 'normal';

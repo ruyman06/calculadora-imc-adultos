@@ -51,18 +51,21 @@
                 <li><a href="#que-es-imc">¿Qué es el IMC?</a></li>
                 <li><a href="#tabla-imc">Tabla IMC</a></li>
                 <li><a href="#consejos">Consejos</a></li>
+                <li><a href="#faq">Preguntas frecuentes</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
     
     <main class="container">
-        <p class="introduccion">
-           ¿Te has preguntado alguna vez si tu peso es saludable? El Índice de Masa Corporal (IMC) es una herramienta sencilla y rápida que te ayuda a saber si estás en el rango adecuado según tu altura, edad y sexo. Esta calculadora está diseñada para adultos y te permite obtener un resultado inmediato sin necesidad de registros.
-        </p>
-        <p class="introduccion">
-           Introduce tus datos en la calculadora y descubre si tu IMC está dentro del rango ideal. Recuerda que aunque el IMC es una guía útil, no sustituye la opinión de un profesional de la salud.
-        </p>
+        <div class="introduccion">
+            <p class="introduccion--text">
+                ¿Te has preguntado alguna vez si tu peso es saludable? El Índice de Masa Corporal (IMC) es una herramienta sencilla y rápida que te ayuda a saber si estás en el rango adecuado según tu altura, edad y sexo. Esta calculadora está diseñada para adultos y te permite obtener un resultado inmediato sin necesidad de registros.
+            </p>
+            <p class="introduccion--text">
+                Introduce tus datos en la calculadora y descubre si tu IMC está dentro del rango ideal. Recuerda que aunque el IMC es una guía útil, no sustituye la opinión de un profesional de la salud.
+            </p>
+        </div>
         <form id="action-form">
             <h2 class="calculadora--title">Calculadora de IMC</h2>
             <label for="peso">Introduzca su peso
@@ -86,7 +89,7 @@
         <div id="resultado" class="resultado"></div>
 
         <h2 id="que-es-imc">¿Qué es el IMC?</h2>
-        <p class="explicacion">El IMC (Índice de Masa Corporal) es una fórmula matemática que relaciona el peso y la estatura de una persona para estimar si tiene un peso saludable. Aunque no distingue entre masa muscular y grasa, sigue siendo una de las herramientas más utilizadas por profesionales de la salud para evaluar el estado nutricional de una persona.</p>
+        <p class="explicacion">El IMC (Índice de Masa Corporal) es una fórmula matemática que relaciona el peso y la estatura de una persona para estimar si tiene un peso saludable. Aunque no distingue entre masa muscular y grasa, sigue siendo una de las herramientas más utilizadas por profesionales de la salud para evaluar el estado nutricional de una persona. Esta medida es fundamental en nutrición, medicina preventiva y programas de salud pública para evaluar riesgos asociados al peso corporal.</p>
 
         <h3>Limitaciones del IMC</h3>
         <p class="limitaciones">
@@ -149,38 +152,28 @@
 
         <div class="consejos">
             <h2 id="consejos">Consejos para mantener un IMC saludable</h2>
-            <p class="consjos--text">
+            <p class="consejos--text">
                 Mantener un IMC dentro del rango normal no solo es cuestión de peso, sino de bienestar general. Aquí tienes algunos consejos prácticos para lograr y mantener un peso saludable de forma sostenible.
             </p>
             <details>
-                <summary>
-                    Aliméntate de forma equilibrada
-                </summary>
-                Prioriza frutas, verduras, proteínas magras y granos integrales. Evita los ultraprocesados y azúcares añadidos.
+                <summary><h3>Alimentacióm equilibrada</h3></summary>
+                Mantén una dieta rica en frutas, verduras, proteínas magras y cereales integrales. Evita azúcares añadidos y grasas saturadas. Comer porciones adecuadas ayuda a mantener un peso saludable.
             </details>
             <details>
-                <summary>Haz ejercicio regularmente</summary>
-                Realiza al menos 150 minutos de actividad física moderada a la semana, como caminar, nadar o montar en bici.
+                <summary><h3>Actividad física regular</h3></summary>
+                Se recomienda realizar al menos 150 minutos semanales de ejercicio moderado como caminar, nadar o montar en bicicleta. La actividad física ayuda a controlar el peso y mejora la salud cardiovascular.
             </details>
             <details>
-                <summary>Controla las porciones</summary>
-                Comer en exceso, incluso alimentos saludables, puede afectar tu IMC.
+                <summary><h3>Hidratación adecuada</h3></summary>
+                Bebe suficiente agua durante el día. La hidratación es fundamental para el metabolismo y puede ayudarte a sentirte saciado, evitando el exceso de comida.
             </details>
             <details>
-                <summary>Duerme bien</summary>
-                La falta de sueño puede alterar tus hormonas y aumentar el apetito.
+                <summary><h3>Sueño y manejo del estrés</h3></summary>
+                Dormir bien y mantener el estrés bajo control también impacta en tu peso. La falta de sueño puede alterar las hormonas del apetito, y el estrés crónico puede llevar a comer en exceso.
             </details>
             <details>
-                <summary>Hidrátate</summary>
-                Beber agua regularmente ayuda a mantener el metabolismo activo y evita la confusión entre hambre y sed.
-            </details>
-            <details>
-                <summary>Evita dietas extremas</summary>
-                Evita dietas extremas:</strong> Las dietas milagro suelen provocar efecto rebote. Prefiere hábitos sostenibles a largo plazo.
-            </details>
-            <details>
-                <summary>Consulta a un especialista</summary>
-                Consulta a un especialista:</strong> Un nutricionista o médico puede darte un plan adaptado a tus necesidades personales.
+                <summary><h3>Consulta médica</h3></summary>
+                El IMC es solo un indicador general. Para una evaluación más precisa, consulta con un profesional de la salud que pueda considerar otros factores como la masa muscular o condiciones médicas.
             </details>
         </div>
 
@@ -189,11 +182,33 @@
             Tener un IMC elevado puede estar relacionado con un mayor riesgo de padecer enfermedades cardiovasculares, hipertensión, diabetes tipo 2, apnea del sueño y otros problemas de salud. Mantener un peso saludable ayuda a prevenir estas condiciones y a mejorar la calidad de vida.
         </p>
 
+        <section id="faq" aria-label="Preguntas frecuentes sobre el IMC">
+            <h2 class="faq--title">Preguntas frecuentes sobre el IMC</h2>
+            <dl>
+                <dt>¿El IMC es una medida precisa para todos?</dt>
+                <dd>El IMC es una herramienta sencilla que ayuda a evaluar el peso corporal, pero no distingue entre masa muscular y grasa. No es perfecta para deportistas o personas mayores.</dd>
+
+                <dt>¿Cómo puedo bajar mi IMC si está alto?</dt>
+                <dd>Para reducir el IMC, es importante combinar una alimentación equilibrada con ejercicio regular y consultar a un profesional de la salud para un plan personalizado.</dd>
+
+                <dt>¿Puedo usar esta calculadora si soy menor de 18 años o mayor de 65?</dt>
+                <dd>Esta calculadora está diseñada para adultos entre 18 y 65 años, ya que los rangos de IMC pueden variar para niños y personas mayores.</dd>
+
+                <dt>¿Qué otros factores influyen en la salud además del IMC?</dt>
+                <dd>Además del IMC, la distribución de grasa corporal, la masa muscular, la genética y otros indicadores de salud son importantes para evaluar el bienestar general.</dd>
+            </dl>
+        </section>
+
     </main>
 
     <footer class="footer">
         <p>&copy; 2025 Calculadora IMC.</p>
         <p>
+            <a href="#top">Inicio</a> | 
+            <a href="#que-es-imc">¿Qué es el IMC?</a> | 
+            <a href="#tabla-imc">Tabla IMC</a> | 
+            <a href="#consejos">Consejos</a> | 
+            <a href="#faq">Preguntas frecuentes</a> | 
             <a href="aviso-legal/">Aviso legal</a> | 
             <a href="politica-privacidad/">Política de privacidad</a> | 
             <a href="mailto:ruymanbarbuzano200@gmail.com" id="contacto">Contacto</a>

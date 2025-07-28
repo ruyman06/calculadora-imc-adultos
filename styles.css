@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    background-color: #FAFAFA;
+    background-color: #FFF;
     font-family: sans-serif;
     font-weight: 500;
 }
@@ -24,12 +24,11 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
     box-shadow: 0 0 15px #0005;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .nav__list li {
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 25px;
 }
 
 .nav__list li a{
@@ -37,17 +36,26 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
     color: #212121;
     font-size: 16px;
     font-weight: bolder;
-    border-radius: 7px;
-    background-color: #64B5F6;
+    border-radius: 6px;
+    background-color: #99baf78e;
     padding: 5px 13px;
-    
+    box-shadow: 0 0 5px #0003;
+    transition: padding 0.3s;
+}
+
+.nav__list li a:hover{
+    padding: 7px 15px;
 }
 
 .container {
     min-height: 100vh;
     display: flex;
     flex-flow: column wrap;
-    padding: 20px 30px 20px 100px;
+    padding: 30px 30px 40px 50px;
+    max-width: 1000px;
+    background-color: #FAFAFA;
+    margin: auto;
+    box-shadow: 0 0 20px #0002;
 }
 
 h1 {
@@ -56,18 +64,18 @@ h1 {
     display: inline;
 }
 
-.introduccion {
-    width: 80%;
+.introduccion--text {
+    width: 90%;
     text-wrap: balance;
     margin-bottom: 20px;
     margin-top: 5px;
 }
 
 .explicacion, .ideal, .respuesta, .limitaciones, .consejos--text, .calculo--text, .consecuencias--text {
-    width: 80%;
     text-wrap: balance;
     margin-bottom: 40px;
     margin-top: 10px;
+    max-width: 90%;
 }
 
 .respuesta {
@@ -91,7 +99,7 @@ h1 {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 15px #0002;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .calculadora--title {
@@ -162,6 +170,11 @@ label {
     border-radius: 15px;
 }
 
+.resultado.bajopeso {
+    background-color: #FFCDD2; 
+    box-shadow: 0 0 10px #FFCDD2;
+}
+
 .resultado.normal {         /* verde claro */
     background-color: #C8E6C9; 
     box-shadow: 0 0 10px #C8E6C9;
@@ -219,15 +232,20 @@ details {
     border: 2px solid #DCDCDC;
     min-width: 200px;
     max-width: 700px;
-    width: 50%;
+    width: 80%;
     margin-top: 10px;
     border-radius: 10px;
+    text-align: justify;
 }
 
 summary {
     font-weight: bold;
     background: transparent;
     padding: 10px 5px;
+}
+
+summary h3 {
+    display: inline;
 }
 
 summary:hover {
@@ -238,6 +256,22 @@ summary:hover {
     margin-top: 40px;
 }
 
+.faq--title {
+    margin-top: 10px;
+}
+
+#faq dt {
+    font-size: 18px;   
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+#faq dd {
+    margin-top: 8px;
+    text-wrap: balance;
+    max-width: 90%;
+}
+
 .footer {
     background-color: #F5F5F5;
     color: #000;
@@ -245,7 +279,7 @@ summary:hover {
     padding: 1.5rem;
     font-size: 1rem;
     font-weight: 500;
-    margin-top: 3rem;
+    margin-top: 2rem;
     border-top: 1px solid #ddd;
 }
 
@@ -259,7 +293,7 @@ summary:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 950px) {
     html {
     scroll-padding-top: 250px;
     }
