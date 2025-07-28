@@ -1,3 +1,6 @@
+/* O */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
 html {
     scroll-padding-top: 135px;
 }
@@ -5,8 +8,8 @@ html {
 body {
     margin: 0;
     background-color: #FFF;
-    font-family: sans-serif;
-    font-weight: 500;
+    font-family: 'Inter', sans-serif; /* o 'Manrope' */
+    line-height: 1.6; 
 }
 
 body, div, h1, h2, p, select, form, label, input, table, details, summary {
@@ -111,6 +114,18 @@ h1 {
 label {
     font-size: 18px;
     color: #212121;
+    display: block;
+}
+
+.slider {
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 10px 8px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 2px solid #CCCCCC;
+    border-radius: 10px;
 }
 
 .container__input, .input--select {
@@ -124,6 +139,11 @@ label {
     border-radius: 10px;
     background-color: inherit;
     transition: background-color 0.5s, border-color 0.5s;
+    box-shadow: 0 0 5px #0003;
+}
+
+.input--slider {
+    margin-bottom: 0;
 }
 
 .container__input::placeholder, .input--select {
@@ -147,7 +167,8 @@ label {
     border-radius: 15px;
     word-break:keep-all;
     transition: background-color 0.5s;
-    font-weight: 800px;
+    box-shadow: 0 0 5px #0003;
+    font-size: 15px;
 }
 
 .container__submit:hover {
@@ -265,6 +286,7 @@ summary:hover {
     font-size: 18px;   
     font-weight: 300;
     margin-top: 15px;
+    text-decoration: underline;
 }
 
 #faq dd {

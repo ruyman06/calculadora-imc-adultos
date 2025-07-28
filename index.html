@@ -68,19 +68,21 @@
         </div>
         <form id="action-form">
             <h2 class="calculadora--title">Calculadora de IMC</h2>
-            <label for="peso">Introduzca su peso
-                <input class="container__input" placeholder="Peso en kg" type="number" id="peso"  min="0" required>
+            <label for="peso">Peso (kg):
+                <input type="number" id="peso-input" min="30" max="200" value="70" step="0.1" class="container__input input--slider" required>
+                <input type="range" id="peso-slider" min="30" max="200" value="70" class="slider" required>
             </label>
-            <label for="altura">Introduzca su altura 
-                <input class="container__input" placeholder="Altura en cm" type="number" id="altura" min="0" max="300" required>
+            <label for="altura">Altura (cm): 
+                <input type="number" id="altura-input" min="100" max="220" value="170" class="container__input input--slider" step="1">
+                <input type="range" id="altura-slider" min="100" max="250" value="170" class="slider">
             </label>
-            <label for="sexo">Seleccione su sexo
+            <label for="sexo">Sexo
                 <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
                 <option value="hombre">Hombre</option>
                 <option value="mujer">Mujer</option>
             </select>
             </label>
-            <label for="edad">Escriba su edad 
+            <label for="edad">Edad 
                 <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="18" max="65" required >
             </label>
             <button type="submit" class="container__submit">Calcular IMC</button>
