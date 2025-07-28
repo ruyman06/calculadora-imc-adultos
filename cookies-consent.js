@@ -3,8 +3,8 @@
 window.addEventListener("load", function () {
   window.cookieconsent.initialise({
     palette: {
-      popup: { background: "#212121ad" },
-      button: { background: "#1976d2ad" }
+      popup: { background: "#212121e7" },
+      button: { background: "#1976d2e7" }
     },
     theme: "classic",
     content: {
