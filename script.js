@@ -58,8 +58,8 @@ document.getElementById('action-form').addEventListener('submit', function (e) {
     resultado.innerHTML = `
         Tu IMC es ${imc.toFixed(1)} (${clasificacion}).
         <br>
-        <a href="#tabla-imc" style="font-size: 18px; color: #1976D2; text-decoration: underline; display: inline-block; margin-top: 6px;">
-            Ver tabla de interpretación
+        <a href="#tabla-imc" style="font-size: 18px; color: #1976D2; display: inline-block; text-decoration: none; margin-top: 6px;">
+            Ver tabla de interpretación →
         </a>
     `
 });
