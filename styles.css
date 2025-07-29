@@ -320,6 +320,10 @@ li {
     max-width: 90%;
 }
 
+.bold--li {
+    font-weight: bold;
+}
+
 .consejos {
     margin-top: 10px;
 }
