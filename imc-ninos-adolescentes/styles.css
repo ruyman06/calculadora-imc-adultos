@@ -70,7 +70,7 @@ h1 {
 }
 
 .introduccion--text {
-    width: 90%;
+    width: 100%;
     text-wrap: balance;
     margin-bottom: 20px;
     margin-top: 5px;
@@ -80,7 +80,7 @@ h1 {
     text-wrap: balance;
     margin-bottom: 40px;
     margin-top: 10px;
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .explicacion--2 {
@@ -328,7 +328,7 @@ h3 {
 li {
     margin: 10px 0;
     text-wrap: balance;
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .bold--li {
@@ -382,7 +382,7 @@ summary:hover {
 #faq dd {
     margin-top: 8px;
     text-wrap: balance;
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .footer {
