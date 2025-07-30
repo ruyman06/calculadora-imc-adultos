@@ -33,10 +33,6 @@ window.addEventListener("load", function () {
     },
     onStatusChange: function (status) {
       if (this.hasConsented()) {
-        console.log("Aceptado: Mostrando anuncios...");
-        // Solo activa los anuncios (el script ya está cargado)
-        (adsbygoogle = window.adsbygoogle || []).push({});
-
         console.log("Aceptado: Cargando scripts...");
         const gaScript = document.createElement("script");
         gaScript.async = true;
