@@ -1,5 +1,3 @@
-// cookies-consent.js
-
 window.addEventListener("load", function () {
   window.cookieconsent.initialise({
     palette: {
@@ -16,7 +14,7 @@ window.addEventListener("load", function () {
     },
     onStatusChange: function (status) {
       if (this.hasConsented()) {
-        // Google Analytics
+        // Cargar scripts si ACEPTA
         const gaScript = document.createElement("script");
         gaScript.async = true;
         gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-S9ZZ1CY21L";
@@ -27,12 +25,15 @@ window.addEventListener("load", function () {
         gtag('js', new Date());
         gtag('config', 'G-S9ZZ1CY21L');
 
-        // Google AdSense
         const adsScript = document.createElement("script");
         adsScript.async = true;
         adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3980836867624384";
         adsScript.crossOrigin = "anonymous";
         document.head.appendChild(adsScript);
+      } else {
+        // Bloquear scripts si RECHAZA
+        console.log("Cookies rechazadas. No se cargarán Analytics ni AdSense.");
+        // Opcional: Borrar cookies existentes de GA/AdSense (requiere implementación adicional).
       }
     }
   });
