@@ -10,6 +10,7 @@ window.addEventListener("load", function () {
     content: {
       message: "Usamos cookies para análisis y mostrar anuncios personalizados.",
       dismiss: "Aceptar",
+      deny: "Rechazar",
       link: "Leer más",
       href: "/politica-privacidad/"
     },
@@ -18,13 +19,13 @@ window.addEventListener("load", function () {
         // Google Analytics
         const gaScript = document.createElement("script");
         gaScript.async = true;
-        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-DBR48D17HD";
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-CD2HKSPHT9";
         document.head.appendChild(gaScript);
 
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'G-DBR48D17HD');
+        gtag('config', 'G-CD2HKSPHT9');
 
         // Google AdSense
         const adsScript = document.createElement("script");
