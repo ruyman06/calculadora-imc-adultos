@@ -76,11 +76,15 @@ h1 {
     margin-top: 5px;
 }
 
-.explicacion, .ideal, .respuesta, .limitaciones, .consejos--text, .calculo--text, .consecuencias--text {
+.explicacion, .ideal, .respuesta, .limitaciones, .consejos--text, .calculo--text, .consecuencias--text, .disclaimer {
     text-wrap: balance;
     margin-bottom: 40px;
     margin-top: 10px;
     max-width: 100%;
+}
+
+.disclaimer {
+    color: #666;
 }
 
 .explicacion--2 {
