@@ -410,6 +410,11 @@ summary:hover {
     text-decoration: underline;
 }
 
+.cc-deny {
+  display: inline-block !important;
+  background-color: #f44336 !important; /* Color rojo para distinguirlo */
+}
+
 @media (max-width: 950px) {
     html {
     scroll-padding-top: 250px;
