@@ -24,7 +24,12 @@ window.addEventListener("load", function () {
       dismiss: "Aceptar",
       deny: "Rechazar",
       link: "Leer más",
-      href: "/politica-privacidad/"
+      href: "/politica-privacidad/",
+
+      allow: "Aceptar",
+      deny: "Rechazar",
+      header: "Cookies en este sitio",
+      close: "✕"
     },
     onStatusChange: function (status) {
       if (this.hasConsented()) {
