@@ -33,6 +33,10 @@ window.addEventListener("load", function () {
     },
     onStatusChange: function (status) {
       if (this.hasConsented()) {
+        console.log("Aceptado: Mostrando anuncios...");
+        // Solo activa los anuncios (el script ya está cargado)
+        (adsbygoogle = window.adsbygoogle || []).push({});
+
         console.log("Aceptado: Cargando scripts...");
         const gaScript = document.createElement("script");
         gaScript.async = true;
@@ -43,13 +47,6 @@ window.addEventListener("load", function () {
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-S9ZZ1CY21L');
-
-        const adsScript = document.createElement("script");
-        adsScript.async = true;
-        adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3980836867624384";
-        adsScript.crossOrigin = "anonymous";
-        document.head.appendChild(adsScript);
-
       } else {
         console.log("Rechazado: Bloqueando cookies.");
         // Opcional: Borrar cookies existentes
