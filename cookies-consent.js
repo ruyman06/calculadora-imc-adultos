@@ -7,8 +7,8 @@ window.addEventListener("load", function () {
     theme: "classic",
     content: {
       message: "Usamos cookies para análisis y mostrar anuncios personalizados.",
-      dismiss: "Aceptar",
       deny: "Rechazar",
+      dismiss: "Aceptar",
       link: "Leer más",
       href: "/politica-privacidad/"
     },
