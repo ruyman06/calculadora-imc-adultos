@@ -40,13 +40,14 @@ window.addEventListener("load", function () {
         console.log("Aceptado: Cargando scripts...");
         const gaScript = document.createElement("script");
         gaScript.async = true;
-        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-S9ZZ1CY21L";
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-BBJWP86LDZ";
         document.head.appendChild(gaScript);
 
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-S9ZZ1CY21L');
+
+        gtag('config', 'G-BBJWP86LDZ');
       } else {
         console.log("Rechazado: Bloqueando cookies.");
         // Opcional: Borrar cookies existentes
