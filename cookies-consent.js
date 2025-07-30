@@ -19,13 +19,13 @@ window.addEventListener("load", function () {
         // Google Analytics
         const gaScript = document.createElement("script");
         gaScript.async = true;
-        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-CD2HKSPHT9";
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-S9ZZ1CY21L";
         document.head.appendChild(gaScript);
 
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'G-CD2HKSPHT9');
+        gtag('config', 'G-S9ZZ1CY21L');
 
         // Google AdSense
         const adsScript = document.createElement("script");
