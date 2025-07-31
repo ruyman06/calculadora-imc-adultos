@@ -65,10 +65,13 @@ window.addEventListener("load", function() {
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-BBJWP86LDZ', {
-      storage: 'none',
-      client_storage: 'none',
-      anonymize_ip: true
-    });
+        storage: 'none',
+        client_storage: 'none',
+        anonymize_ip: true,
+        // Forzar cookies first-party:
+        cookie_flags: 'SameSite=Lax; Secure',
+        cookie_domain: window.location.hostname // Usa tu dominio, no el de Google
+      });
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJWP86LDZ';
