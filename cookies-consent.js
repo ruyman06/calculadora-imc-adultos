@@ -68,11 +68,9 @@ window.addEventListener("load", function() {
     gtag('js', new Date());
     
     gtag('config', 'G-BBJWP86LDZ', {
-      cookie_flags: 'SameSite=Lax; Secure; Path=/', 
-      cookie_domain: window.location.hostname, // Ej: calculadoraimc.es
-      cookie_prefix: 'ga_',
-      client_storage: 'cookie',
-      use_google_client_id: true // 👈 Mantiene la persistencia sin third-party
+      storage: 'none',
+      client_storage: 'none',
+      server_container_url: 'https://tuservidor.com/collect' // Endpoint personalizado
     });
 
     // 3. Carga el script con parámetros de privacidad
