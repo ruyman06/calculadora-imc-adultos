@@ -53,10 +53,16 @@ window.addEventListener("load", function() {
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJWP86LDZ';
+    script.crossOrigin = 'anonymous';  // 👈 Clave para el nuevo estándar
     document.head.appendChild(script);
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-BBJWP86LDZ');
+    gtag('config', 'G-BBJWP86LDZ', {
+      cookie_flags: 'SameSite=Lax; Secure; Path=/',  //  Evita "SameSite=None"
+      cookie_domain: window.location.hostname,
+      cookie_prefix: 'ga_',
+      anonymize_ip: true
+  });
   }
 });
