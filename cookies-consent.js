@@ -49,28 +49,33 @@ window.addEventListener("load", function() {
 
   // Función para cargar Google Analytics
   function loadGoogleAnalytics() {
-    // Limpia cookies antiguas de terceros
-    document.cookie.split(';').forEach(cookie => {
-      const domain = cookie.includes('google-analytics.com') 
-        ? 'domain=.google-analytics.com;' 
-        : '';
-      document.cookie = `${cookie.split('=')[0]}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; ${domain}`;
+    // 1. Limpieza agresiva de cookies de terceros
+    const domainsToClean = [
+      '.google-analytics.com',
+      'region1.google-analytics.com',
+      '.googletagmanager.com'
+    ];
+    
+    domainsToClean.forEach(domain => {
+      document.cookie = `_ga=; path=/; domain=${domain}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+      document.cookie = `_gid=; path=/; domain=${domain}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+      document.cookie = `ar_debug=; path=/; domain=${domain}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
     });
 
-    // Configuración GA4 first-party
+    // 2. Configuración FIRST-PARTY
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     
     gtag('config', 'G-BBJWP86LDZ', {
-      cookie_flags: 'SameSite=Lax; Secure; Path=/',
-      cookie_domain: window.location.hostname,
+      cookie_flags: 'SameSite=Lax; Secure; Path=/', 
+      cookie_domain: window.location.hostname, // Ej: calculadoraimc.es
       cookie_prefix: 'ga_',
       client_storage: 'cookie',
-      use_google_client_id: true  // 👈 Clave para persistencia sin third-party
+      use_google_client_id: true // 👈 Mantiene la persistencia sin third-party
     });
 
-    // Carga el script con atributos de privacidad
+    // 3. Carga el script con parámetros de privacidad
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJWP86LDZ';
