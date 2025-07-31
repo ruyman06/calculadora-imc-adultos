@@ -132,7 +132,8 @@ h1 {
 }
 
 #action-form {
-    background-color: #DCDCDC;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border: 1px solid #90caf9;
     min-width: 200px;
     max-width: 500px;
     width: 50%;
@@ -234,11 +235,11 @@ label {
     padding: 10px 8px;
     margin-bottom: 25px;
     margin-top: 7px;
-    border: 2px solid #CCCCCC;
+    border: none;
     border-radius: 10px;
     background-color: inherit;
     transition: background-color 0.5s, border-color 0.5s;
-    box-shadow: 0 0 5px #0003;
+    box-shadow: 0 0 5px #0005;
 }
 
 .input--slider {
@@ -251,7 +252,7 @@ label {
 
 .container__input:focus, .input--select:focus {
     background-color: #FFFFFF;
-    border-color: #2196F3;
+    border: 2px solid #90caf9;
 }
 
 .container__submit {
@@ -266,17 +267,13 @@ label {
     border-radius: 15px;
     word-break:keep-all;
     transition: background-color 0.5s;
-    box-shadow: 0 0 5px #0003;
+    box-shadow: 0 0 5px #0005;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .container__submit:hover {
     background-color: #64B5F6;
-    cursor: pointer;
-}
-
-.container__submit:focus {
-    background-color: #2196F3;
     cursor: pointer;
 }
 
@@ -434,6 +431,10 @@ summary:hover {
 .cc-deny {
   display: inline-block !important;
   background-color: #f44336 !important; /* Color rojo para distinguirlo */
+}
+
+#resultado {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes highlight {
