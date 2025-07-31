@@ -1,15 +1,16 @@
 window.addEventListener("load", function() {
-  // 1. Verifica si el usuario YA aceptó antes
-  const savedConsent = localStorage.getItem('cookie_consent'); // Usamos localStorage (persiste incluso al cerrar el navegador)
-  
-  // Si ya aceptó, carga GA y NO muestres el banner
+  if (typeof window.cookieconsent === 'undefined') {
+    console.error('cookieconsent library not loaded!');
+    return;
+  }
+
+  const savedConsent = localStorage.getItem('cookie_consent');
   if (savedConsent === 'accepted') {
-    console.log("Cookies ya aceptadas")
+    console.log("Cookies ya aceptadas");
     loadGoogleAnalytics();
     return;
   }
 
-  // 2. Configura el banner (con Aceptar/Rechazar)
   window.cookieconsent.initialise({
     palette: {
       popup: { background: "#212121e7", text: "#fff" },
@@ -24,56 +25,50 @@ window.addEventListener("load", function() {
       deny: "Rechazar",
       link: "Leer más",
       href: "/politica-privacidad/",
-      close: "", // Eliminamos la "X" para forzar a elegir
+      close: "",
       allow: "Aceptar"
     },
     cookie: {
-      name: 'cookie_consent', // Nombre de la cookie
-      sameSite:'Lax',
-      secure: 'true',
+      name: 'cookie_consent',
+      sameSite: 'Lax',
+      secure: true,
       path: '/',
-      expires: 365, // Dura 1 año (solo aplica si acepta)
+      expires: 365,
       domain: window.location.hostname
     },
     onStatusChange: function(status) {
       if (this.hasConsented()) {
-        // Si acepta: guarda en localStorage + carga GA
         localStorage.setItem('cookie_consent', 'accepted');
         loadGoogleAnalytics();
       } else {
-        // Si rechaza: NO guarda nada (el banner seguirá apareciendo)
         console.log("Cookies rechazadas");
+        clearAnalyticsCookies();
       }
     }
   });
 
-  // Función para cargar Google Analytics
-  function loadGoogleAnalytics() {
-    // 1. Limpieza agresiva de cookies de terceros
+  function clearAnalyticsCookies() {
     const domainsToClean = [
+      window.location.hostname,
       '.google-analytics.com',
-      'region1.google-analytics.com',
       '.googletagmanager.com'
     ];
-    
     domainsToClean.forEach(domain => {
       document.cookie = `_ga=; path=/; domain=${domain}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
       document.cookie = `_gid=; path=/; domain=${domain}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
-      document.cookie = `ar_debug=; path=/; domain=${domain}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
     });
+  }
 
-    // 2. Configuración FIRST-PARTY
+  function loadGoogleAnalytics() {
+    clearAnalyticsCookies();
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    
     gtag('config', 'G-BBJWP86LDZ', {
       storage: 'none',
       client_storage: 'none',
-      server_container_url: 'https://tuservidor.com/collect' // Endpoint personalizado
+      anonymize_ip: true
     });
-
-    // 3. Carga el script con parámetros de privacidad
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJWP86LDZ';
