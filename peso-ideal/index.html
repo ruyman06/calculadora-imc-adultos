@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Calculadora IMC para niños y adolescentes - Salud infantil</title>
-    <meta name="description" content="Calcula el IMC de niños y adolescentes de 2 a 18 años según edad, sexo, peso y altura. Evalúa el crecimiento y detecta posibles riesgos de sobrepeso.">
-    <meta name="keywords" content="IMC niños, IMC calculadora, calculadora IMC,IMC adolescentes, calculadora IMC infantil, índice masa corporal infantil, salud infantil, peso niños, obesidad infantil, crecimiento niños, peso, calculadora peso, fórmula IMC">
+    <title>Calculadora de Peso Ideal Exacto • Altura, Edad y Sexo | GRATIS 2025</title>¡
+    <meta name="description" content="Calcula tu peso ideal GRATIS según tu altura, edad y sexo con nuestra herramienta precisa. Descubre tu rango saludable, comparaciones con IMC y consejos personalizados.">
+    <meta name="keywords" content="calculadora peso ideal, peso ideal según altura y edad, calcular peso ideal, peso ideal para altura, tabla de peso y talla, imc ideal, peso ideal por estatura, peso saludable, fórmula peso ideal, peso ideal mujer, peso ideal hombre, rango de peso saludable, calculadora de peso corporal ideal, cómo saber mi peso ideal, peso ideal según complexión">
     <meta name="author" content="Ruyman Barbuzano Bethencourt">
 
     <meta name="google-site-verification" content="np5JnMIK_DIqWDdBjxSXYgH0g4u2kfDh2risprPD_LU" />
     <meta name="google-analytics" content="cookie_flags=SameSite=Lax; Secure; Path=/">
 
     <link rel="icon" href="../favicon-32x32.png" type="image/png">
-    <link rel="canonical" href= "https://calculadoraimc.es/imc-ninos-adolescentes/" />
+    <link rel="canonical" href="https://calculadoraimc.es/" />
     <link rel="apple-touch-icon" href="../favicon-32x32.png">
 
     <!-- Estilo pagina web -->
     <link rel="stylesheet" href="styles.css">
-
+    
     <!-- CookieConsent script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
@@ -27,31 +28,26 @@
     <script src="../cookies-consent.js"></script>
 
     <script type="application/ld+json">
+    <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Calculator",
-        "name": "Calculadora de IMC para niños y adolescentes",
-        "url": "https://calculadoraimc.es/imc-ninos-adolescentes/",
-        "description": "Calcula el IMC infantil para niños y adolescentes de 2 a 18 años según su edad, sexo, peso y altura. Consulta los percentiles OMS y conoce su estado nutricional.",
-        "input": [
-        {"@type": "PropertyValue", "name": "Peso", "unitText": "kg"},
+    "@context": "https://schema.org",
+    "@type": "Calculator",
+    "name": "Calculadora de Peso Ideal",
+    "url": "https://calculadoraimc.es/peso-ideal",
+    "description": "Calcula tu peso ideal según altura, edad y sexo con fórmulas médicas.",
+    "input": [
         {"@type": "PropertyValue", "name": "Altura", "unitText": "cm"},
-        {"@type": "PropertyValue", "name": "Edad", "unitText": "años"},
-        {"@type": "PropertyValue", "name": "Sexo", "value": ["Niña", "Niño"]}
-        ],
-        "output": [
-        {"@type": "PropertyValue", "name": "IMC", "unitText": "kg/m²"},
-        {"@type": "PropertyValue", "name": "Percentil OMS", "unitText": "%"},
-        {"@type": "PropertyValue", "name": "Clasificación", "value": ["Bajo peso", "Normal", "Riego de sobrepeso", "Sobrepeso", "Sobrepeso grado 2", "Obesidad"]}
-        ]
+        {"@type": "PropertyValue", "name": "Edad", "unitText": "años"}
+    ]
     }
+    </script>
     </script>
 
 </head>
     
 <body id="top">
     <header class="header">
-        <a href="../" class="home-link">
+        <a href="/" class="home-link">
            <span>Calculadora IMC</span>
         </a> <!-- Nuevo enlace home -->
         <nav class="nav">
@@ -66,32 +62,28 @@
     </header>
     
     <main class="container">
-        <h1>Calculadora del IMC para niños y adolescentes</h1>
+        <h1>Calculadora de Peso Ideal</h1>
         <div class="introduccion">
-            <p class="introduccion--text">
-                ¿Te has preguntado alguna vez si tu peso es saludable? El Índice de Masa Corporal (IMC) es una herramienta sencilla y rápida que te ayuda a saber si estás en el rango adecuado según tu altura, edad y sexo. Esta calculadora está diseñada para niños y adolescentes entre 2 y 18 años. Para edades superiores a 18 años, utilice <a href="../">la Calculadora del IMC para adultos</a>.
-            </p>
+            <p class="introduccion--text">  
+                ¿Quieres saber cuál es tu peso ideal según tu altura, edad y sexo. Nuestra calculadora de peso ideal gratuita te ayuda a descubrir el rango saludable recomendado por expertos, usando fórmulas médicas como Hamwi y Devine.  
+            </p>  
         </div>
         <form id="action-form">
-            <h2 class="calculadora--title">Calculadora del IMC</h2>
-            <label for="peso-input">Peso (kg):
-                <input type="number" id="peso-input" min="5" max="200" value="30" step="0.1" class="container__input input--slider" required>
-                <input type="range" id="peso-slider" min="5" max="200" value="30" class="slider" required>
-            </label>
+            <h2 class="calculadora--title">Calcula tu peso ideal</h2>
             <label for="altura-input">Altura (cm): 
-                <input type="number" id="altura-input" min="40" max="250" value="100" class="container__input input--slider" step="1">
-                <input type="range" id="altura-slider" min="40" max="250" value="100" class="slider">
+                <input type="number" id="altura-input" min="0" max="250" value="150" class="container__input input--slider" step="1">
+                <input type="range" id="altura-slider" min="0" max="250" value="150" class="slider">
             </label>
             <label for="sexo">Sexo
                 <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
-                <option value="mujer">Niña</option>
-                <option value="hombre">Niño</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
             </select>
             </label>
             <label for="edad">Edad 
-                <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="2" max="18" required >
+                <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="0" max="110" required >
             </label>
-            <button type="submit" class="container__submit">Calcular IMC</button>
+            <button type="submit" class="container__submit">Calcular peso ideal</button>
         </form>
 
         <div id="resultado" class="resultado"></div>
@@ -100,63 +92,57 @@
     ⚠️      <strong>Importante:</strong> Esta calculadora es una herramienta informativa. No sustituye el diagnóstico de un profesional médico. Consulte a su doctor antes de tomar decisiones sobre su salud.
         </p>
 
-        <h2 id="que-es-imc">¿Qué es el IMC?</h2>
-        <p class="explicacion">El <strong>Índice de Masa Corporal</strong> es una fórmula matemática que relaciona el peso y la estatura de una persona para estimar si tiene un peso saludable. Aunque no distingue entre masa muscular y grasa, sigue siendo una de las herramientas más utilizadas por profesionales de la salud para evaluar el estado nutricional de una persona. Esta medida es fundamental en nutrición, medicina preventiva y programas de salud pública para evaluar riesgos asociados al peso corporal.</p>
 
-        <p class="explicacion explicacion--2">Esta fórmula, desarrollada por el estadístico belga Adolphe Quetelet en el siglo XIX. El resultado permite clasificar a una persona en distintas categorías, como bajo peso, peso normal, sobrepeso u obesidad. Por ello, su utilidad principal radica en ayudar a identificar rápidamente posibles riesgos de salud relacionados con el peso corporal.</p>
+        <h2 id="que-es-imc">¿Cuál es mi peso ideal?</h2>
+        <p class="explicacion">Tu peso ideal depende de varios factores: sexo, altura, edad, complexión corporal y nivel de actividad física. Aunque no existe un número mágico, sí hay rangos recomendados por la Organización Mundial de la Salud (OMS) que ayudan a evaluar tu estado de salud general. El peso ideal se define como aquel en el que tu cuerpo funciona óptimamente, con bajo riesgo de enfermedades relacionadas con el sobrepeso o la delgadez extrema..</p>
 
-        <h3>Limitaciones del IMC</h3>
+
+        <h3>Limitaciones de esta calculadora</h3>
         <p class="limitaciones">
-            Es importante tener en cuenta que el IMC no es una medida perfecta. Existen algunos factores que pueden influir en su precisión, como los siguientes:
+            Esta calculadora es una herramienta orientativa y no sustituye la evaluación de un médico o nutricionista.
         </p>
         <ul>
-            <li><span class="bold--li">No diferencia entre grasa y masa muscular:</span> Personas muy musculosas pueden tener un IMC alto sin tener exceso de grasa.</li>
+            <li><span class="bold--li">No diferencia entre grasa y masa muscular:</span> Personas muy musculosas pueden tener un IMC o peso alto sin tener exceso de grasa.</li>
             <li><span class="bold--li">No considera la distribución de la grasa corporal:</span> La grasa abdominal es más peligrosa que la grasa acumulada en otras zonas.</li>
-            <li><span class="bold--li">Puede no ser preciso para deportistas o personas mayores. </span> En adultos mayores, un IMC ligeramente más alto podría no representar un riesgo, e incluso podría ser protector.</li>
             <li><span class="bold--li">No sustituye una evaluación médica profesional.</span></li>
-            <li><span class="bold--li">No indica el estado nutricional o físico general:</span> Una persona con un Índice de Masa Corporal “normal” puede estar desnutrida o tener problemas de salud relacionados con el sedentarismo.</li>
+            <li><span class="bold--li">No indica el estado nutricional o físico general:</span> Una persona con un peso "ideal" puede estar desnutrida o tener problemas de salud relacionados con el sedentarismo.</li>
             <li><span class="bold--li">Puede dar una falsa sensación de salud:</span> Aunque este dentro del rango normal no garantiza una buena salud cardiovascular o metabólica.</li>
         </ul>
 
-        <h3 class="calculo">¿Cómo se calcula?</h3>
-        <p class="calculo--text">
-            El cálculo se realiza dividiendo el peso (en kilogramos) por la altura al cuadrado (en metros), pero a diferencia de lso adultos hace falta una mayor interpretación de la altura, edad y el sexo, compárandolos con los percentiles establecidos por la Organización Mundial de la Salud (OMS).
-        </p>
-
-        <h2 id="tabla-imc">Tabla de interpretación del IMC</h2>
+        <h2 id="tabla-imc">Tabla IMC</h2>
         <table>
             <tr> 
                 <th>IMC (kg/m²)</th>
                 <th>Clasificación</th>
             </tr>
             <tr> 
-                <td>Menos 18.5</td>
+                <td>Menos de 18.5</td>
                 <td>Bajo peso</td>
             </tr>
             <tr> 
-                <td>18.5 - 21.9</td>
-                <td>Peso normal</td>
+                <td>18.5 – 24.9</td>
+                <td>Normal</td>
             </tr>
             <tr> 
-                <td>22 - 24.9</td>
-                <td>Riesgo de sobrepeso</td>
-            </tr>
-            <tr> 
-                <td>25 - 26.9</td>
+                <td>25.0 – 29.9</td>
                 <td>Sobrepeso</td>
-            </tr>    
+            </tr>
             <tr> 
-                <td>27 - 29.9</td>
-                <td>Sobrepeso grado 2</td>
-            </tr>   
+                <td>30.0 – 34.9</td>
+                <td>Obesidad grado I</td>
+            </tr>
             <tr> 
-                <td>Más de 30</td>
-                <td>Obesidad</td>
-            </tr>  
+                <td>35.0 – 39.9</td>
+                <td>Obesidad grado II</td>
+            </tr>
+            <tr> 
+                <td>40.0 o más</td>
+                <td>Obesidad grado III</td>
+            </tr>         
         </table>
         
         <div class="aviso">
-        ⚠️ Nota: esta calculadora está diseñada para niños y adolescentes entre 2 y 18 años.
+        ⚠️ Nota: esta calculadora está diseñada para adultos entre 18 y 65 años.
         </div>
 
         <div class="aditional-text">
@@ -192,32 +178,40 @@
                 <summary><h3>Consulta médica</h3></summary>
                 El Índice de Masa Corporal es solo un indicador general. Para una evaluación más precisa, consulta con un profesional de la salud que pueda considerar otros factores como la masa muscular o condiciones médicas.
             </details>
+            <details>
+                <summary><h3>Control y seguimiento</h3></summary>
+                Pésate con regularidad, pero no te obsesiones. Usa nuestra herramienta para seguir tu evolución.
+            </details>
         </div>
+
 
         <h2 class="consecuencias">Consecuencias del sobrepeso y la obesidad</h2>
         <p class="consecuencias--text">
             Tener un IMC elevado puede estar relacionado con un mayor riesgo de padecer enfermedades cardiovasculares, hipertensión, diabetes tipo 2 o apnea del sueño. Mantener un peso saludable ayuda a prevenir estas condiciones y a mejorar la calidad de vida.
         </p>
+
         <p class="consecuencias--text consecuencias--text--2">
             El exceso de peso aumenta la carga sobre las articulaciones, especialmente en las rodillas, caderas y columna vertebral, lo que puede provocar dolor crónico, desgaste articular y desarrollar artrosis precoz. También, diversos estudios han encontrado una relación entre el exceso de peso y un aumento en la incidencia de cánceres como el de mama, colon, endometrio, riñón y esófago. Además, el exceso de grasa favorece la aparición de irritaciones, infecciones y dermatitis en pliegues cutáneos, además de aumentar la sudoración y el riesgo de heridas que tardan en cicatrizar.
         </p>
 
+
         <section id="faq" aria-label="Preguntas frecuentes sobre el IMC">
             <h2 class="faq--title">Preguntas frecuentes sobre el IMC</h2>
             <dl>
-                <dt><h3>¿Es una medida precisa para todos?</h3></dt>
-                <dd>El IMC es una herramienta sencilla que ayuda a evaluar el peso corporal, pero no distingue entre masa muscular y grasa. No es perfecta para deportistas o personas mayores.</dd>
+                <dt><h3>¿Cómo saber si estoy en mi peso ideal?</h3></dt>
+                <dd>Introduce tu altura, edad y sexo en nuestra calculadora y obtendrás una estimación basada en fórmulas médicas. También puedes comparar tu IMC en <a href="../index.html">la Calculadora del IMC para adultos</a>.<dd>
 
-                <dt><h3>¿Cómo puedo bajar mi IMC si está alto?</h3></dt>
-                <dd>Para reducir el Índice de Masa Corporal, es importante combinar una alimentación equilibrada con ejercicio regular y consultar a un profesional de la salud para un plan personalizado.</dd>
+                <dt><h3>¿Qué fórmula es más precisa?</h3></dt>
+                <dd>La fórmula de Devine y Hamwi son ampliamente utilizadas en entornos clínicos. Sin embargo, el IMC sigue siendo la referencia pública principal.</dd>
 
-                <dt><h3>¿Puedo usar esta calculadora si soy mayor de 18 años?</h3></dt>
-                <dd>Esta calculadora está diseñada para niños y adolescentes entre 2 y 18 años, ya que los rangos de IMC pueden variar para niños y personas mayores. Para edades superiores a 18 años, utilice <a href="../">la Calculadora del IMC para adultos</a>.</dd>
+                <dt><h3>¿El peso ideal cambia con la edad?</h3></dt>
+                <dd>Sí. A medida que envejeces, puedes perder masa muscular y ganar grasa. El peso saludable varía con el metabolismo y el estilo de vida.</dd>
 
-                <dt><h3>¿Qué otros factores influyen en la salud?</h3></dt>
-                <dd>Además del Índice de Masa Corporal, la distribución de grasa corporal, la masa muscular, la genética y otros indicadores de salud son importantes para evaluar el bienestar general.</dd>
+                <dt><h3>¿Sirve si hago ejercicio o soy deportista?</h3></dt>
+                <dd>En deportistas o personas muy musculadas, el IMC puede no reflejar el estado real. En ese caso, se recomienda medir grasa corporal y masa magra.</dd>
             </dl>
         </section>
+
 
     </main>
 
@@ -229,8 +223,8 @@
             <a href="#tabla-imc">Tabla IMC</a> | 
             <a href="#consejos">Consejos</a> | 
             <a href="#faq">Preguntas frecuentes</a> | 
-            <a href="../aviso-legal/">Aviso legal</a> | 
-            <a href="../politica-privacidad/">Política de privacidad</a> | 
+            <a href="aviso-legal/">Aviso legal</a> | 
+            <a href="politica-privacidad/">Política de privacidad</a> | 
             <a href="mailto:ruymanbarbuzano200@gmail.com" id="contacto">Contacto</a>
         </p>
         <p class="disclaimer">
