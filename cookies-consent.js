@@ -1,16 +1,15 @@
 window.addEventListener("load", function() {
-  if (typeof window.cookieconsent === 'undefined') {
-    console.error('cookieconsent library not loaded!');
-    return;
-  }
-
-  const savedConsent = localStorage.getItem('cookie_consent');
+  // 1. Verifica si el usuario YA aceptó antes
+  const savedConsent = localStorage.getItem('cookie_consent'); // Usamos localStorage (persiste incluso al cerrar el navegador)
+  
+  // Si ya aceptó, carga GA y NO muestres el banner
   if (savedConsent === 'accepted') {
-    console.log("Cookies ya aceptadas");
+    console.log("Cookies ya aceptadas")
     loadGoogleAnalytics();
     return;
   }
 
+  // 2. Configura el banner (con Aceptar/Rechazar)
   window.cookieconsent.initialise({
     palette: {
       popup: { background: "#212121e7", text: "#fff" },
@@ -25,57 +24,36 @@ window.addEventListener("load", function() {
       deny: "Rechazar",
       link: "Leer más",
       href: "/politica-privacidad/",
-      close: "",
+      close: "", // Eliminamos la "X" para forzar a elegir
       allow: "Aceptar"
     },
     cookie: {
-      name: 'cookie_consent',
-      sameSite: 'Lax',
-      secure: true,
+      name: 'cookie_consent', // Nombre de la cookie
       path: '/',
-      expires: 365,
-      domain: window.location.hostname
+      expires: 365, // Dura 1 año (solo aplica si acepta)
     },
     onStatusChange: function(status) {
       if (this.hasConsented()) {
+        // Si acepta: guarda en localStorage + carga GA
         localStorage.setItem('cookie_consent', 'accepted');
         loadGoogleAnalytics();
       } else {
+        // Si rechaza: NO guarda nada (el banner seguirá apareciendo)
         console.log("Cookies rechazadas");
-        clearAnalyticsCookies();
       }
     }
   });
 
-  function clearAnalyticsCookies() {
-    const domainsToClean = [
-      window.location.hostname,
-      '.google-analytics.com',
-      '.googletagmanager.com'
-    ];
-    domainsToClean.forEach(domain => {
-      document.cookie = `_ga=; path=/; domain=${domain}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
-      document.cookie = `_gid=; path=/; domain=${domain}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
-    });
-  }
-
+  // Función para cargar Google Analytics
   function loadGoogleAnalytics() {
-    clearAnalyticsCookies();
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-BBJWP86LDZ', {
-        storage: 'none',
-        client_storage: 'none',
-        anonymize_ip: true,
-        // Forzar cookies first-party:
-        cookie_flags: 'SameSite=Lax; Secure',
-        cookie_domain: window.location.hostname // Usa tu dominio, no el de Google
-      });
+    if (window.dataLayer) return; // Evita cargar duplicado
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJWP86LDZ';
-    script.crossOrigin = 'anonymous';
     document.head.appendChild(script);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BBJWP86LDZ');
   }
 });
