@@ -27,24 +27,30 @@
 
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Calculadora IMC para niños y adolescentes",
-    "url": "https://calculadoraimc.es/imc-ninos-adolescentes/",
-    "applicationCategory": "HealthApplication",
-    "operatingSystem": "All",
-    "description": "Calcula el IMC infantil para niños y adolescentes de 2 a 18 años según su edad, sexo, peso y altura. Consulta los percentiles OMS y conoce su estado nutricional.",
-    "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
-    },
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "87"
-    }
-    }
+        "@context": "https://schema.org",
+        "@type": "Calculator",
+        "name": "Calculadora de IMC para niños y adolescentes",
+        "url": "https://calculadoraimc.es/imc-ninos-adolescentes/",
+        "description": "Calcula el IMC infantil para niños y adolescentes de 2 a 18 años según su edad, sexo, peso y altura. Consulta los percentiles OMS y conoce su estado nutricional.",
+        "input": [
+        {"@type": "PropertyValue", "name": "Peso", "unitText": "kg"},
+        {"@type": "PropertyValue", "name": "Altura", "unitText": "cm"},
+        {"@type": "PropertyValue", "name": "Edad", "unitText": "años"},
+        {"@type": "PropertyValue", "name": "Sexo", "value": ["Niña", "Niño"]}
+        ],
+        "output": [
+        {"@type": "PropertyValue", "name": "IMC", "unitText": "kg/m²"},
+        {"@type": "PropertyValue", "name": "Percentil OMS", "unitText": "%"},
+        {"@type": "PropertyValue", "name": "Clasificación", "value": ["Bajo peso", "Normal", "Riego de sobrepeso", "Sobrepeso", "Sobrepeso grado 2", "Obesidad"]}
+        ]],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "87",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+        }
     </script>
 
 </head>
@@ -82,8 +88,8 @@
             </label>
             <label for="sexo">Sexo
                 <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
-                <option value="hombre">Niña</option>
-                <option value="mujer">Niño</option>
+                <option value="mujer">Niña</option>
+                <option value="hombre">Niño</option>
             </select>
             </label>
             <label for="edad">Edad 
