@@ -436,6 +436,11 @@ summary:hover {
   background-color: #f44336 !important; /* Color rojo para distinguirlo */
 }
 
+@keyframes highlight {
+  0% { transform: scale(1.02); box-shadow: 0 0 15px rgba(25, 118, 210, 0.3); }
+  100% { transform: scale(1); box-shadow: none; }
+}
+
 @media (max-width: 950px) {
     html {
     scroll-padding-top: 250px;
@@ -450,11 +455,14 @@ summary:hover {
     .nav__list {
         padding-left: 0;
         margin: 0;
-        display: none;
     }
 
     .container {
         padding: 1rem;
+    }
+
+    .resultado {
+        width: 100%;
     }
 
     #action-form {
