@@ -52,6 +52,28 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
     padding: 7px 15px;
 }
 
+.home-link {
+    text-decoration: none;
+    color: #212121;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #0004;
+}
+
+.home-link span {
+    font-size: 30px;
+}
+
+.home-link::before {
+    content: "❤️";
+    margin-right: 5px;
+}
+
 .container {
     min-height: 100vh;
     display: flex;
@@ -64,9 +86,8 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
 }
 
 h1 {
-    margin-right: 30px;
     color: #212121;
-    display: inline;
+    margin-top: 5px;
 }
 
 .introduccion--text {
