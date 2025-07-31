@@ -68,10 +68,6 @@ document.getElementById('action-form').addEventListener('submit', function (e) {
         <a href="#tabla-imc" style="font-size: 18px; color: #1976D2; display: inline-block; text-decoration: none; margin-top: 6px;">
             Ver tabla de interpretación →
         </a>
-        <button onclick="window.scrollTo({top: document.getElementById('action-form').offsetTop, behavior: 'smooth'})" 
-                style="margin-top: 15px; padding: 8px 15px; background: #1976D2; color: white; border: none; border-radius: 5px; cursor: pointer;">
-            Volver a calcular
-        </button>
         `;
         
         // Desplazamiento suave al resultado
