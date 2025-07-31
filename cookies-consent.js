@@ -29,8 +29,11 @@ window.addEventListener("load", function() {
     },
     cookie: {
       name: 'cookie_consent', // Nombre de la cookie
+      sameSite:'Lax',
+      secure: 'true',
       path: '/',
       expires: 365, // Dura 1 año (solo aplica si acepta)
+      domain: window.location.hostname
     },
     onStatusChange: function(status) {
       if (this.hasConsented()) {
