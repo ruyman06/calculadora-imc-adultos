@@ -49,20 +49,28 @@ window.addEventListener("load", function() {
 
   // Función para cargar Google Analytics
   function loadGoogleAnalytics() {
+    // Limpia cookies antiguas de terceros
+    document.cookie.split(';').forEach(cookie => {
+      const domain = cookie.includes('google-analytics.com') 
+        ? 'domain=.google-analytics.com;' 
+        : '';
+      document.cookie = `${cookie.split('=')[0]}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; ${domain}`;
+    });
+
+    // Configuración GA4 first-party
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     
-    // Configuración FIRST-PARTY COOKIES
     gtag('config', 'G-BBJWP86LDZ', {
       cookie_flags: 'SameSite=Lax; Secure; Path=/',
-      cookie_domain: window.location.hostname, // Tus cookies en calculadoraimc.es
-      cookie_prefix: 'ga_',  // Ej: ga_123456
-      anonymize_ip: true,
-      client_storage: 'cookie' // Usa solo cookies propias
+      cookie_domain: window.location.hostname,
+      cookie_prefix: 'ga_',
+      client_storage: 'cookie',
+      use_google_client_id: true  // 👈 Clave para persistencia sin third-party
     });
 
-    // Carga el script sin third-party
+    // Carga el script con atributos de privacidad
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJWP86LDZ';
