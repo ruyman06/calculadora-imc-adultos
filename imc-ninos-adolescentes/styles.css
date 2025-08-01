@@ -129,18 +129,19 @@ h1 {
 
 .explicacion, .ideal, .respuesta, .limitaciones, .consejos--text, .calculo--text, .consecuencias--text, .disclaimer {
     text-wrap: balance;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     margin-top: 10px;
     max-width: 100%;
 }
 
 .disclaimer {
     color: #666;
+    margin-bottom: 0;
 }
 
 .explicacion--2 {
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .consecuencias--text--2 {
@@ -333,35 +334,11 @@ label {
     box-shadow: 0 0 10px #eeffc4;
 }  
 
-.resultado.sobrepeso {      /* amarillo */
-    background-color: #FFF9C4; 
-    box-shadow: 0 0 10px #FFF9C4;
-}  
-
-.resultado.sobrepeso-grado2 {      /* amarillo */
-    background-color: rgb(252, 232, 173); 
-    box-shadow: 0 0 10px rgb(252, 232, 173);
-}  
-
 .resultado.obesidad {       /* rojo claro */
     background-color: #FFCDD2; 
     box-shadow: 0 0 10px #FFCDD2;
 }    
 
-table {
-    text-align: center;
-    min-width: 300px;
-    max-width: 600px;
-}
-
-th {
-    background-color: #f0f0f0;
-}
-
-td, th {
-  border: 1px solid #ccc;
-  padding: 0.75rem;
-}
 
 h2 {
     margin-top: 30px;
@@ -373,8 +350,9 @@ h3 {
     color: #212121
 }
 
-.aviso {
-    margin-top: 2rem;
+.aviso a {
+    display: block;
+    margin-bottom: 0;
 }
 
 li {
@@ -477,7 +455,7 @@ summary:hover {
     scroll-padding-top: 250px;
     }
     .header {
-        padding: 0rem 1rem;
+        padding: 1rem 1rem;
     }
     .nav {
         margin: 0;
