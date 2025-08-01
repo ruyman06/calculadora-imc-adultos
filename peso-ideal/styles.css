@@ -36,7 +36,7 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
     border-radius: 6px;
 }
 
-.nav__list li a{
+.nav__list li a, #btn-selector{
     text-decoration: none;
     color: #212121;
     font-size: 16px;
@@ -46,10 +46,40 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
     padding: 5px 13px;
     box-shadow: 0 0 5px #0003;
     transition: padding 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .nav__list li a:hover{
     padding: 7px 15px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#calc-op {
+    display: block;
+    padding: 5px 10px;
+    color: #333;
+    text-decoration: none;
+    background: #99baf7;
+}
+
+#calc-op:hover {
+    background: #bfe5f3;
+    padding: 7px 10px;
+}
+
+.selector-calculadoras:hover .dropdown-menu {
+    display: block;
 }
 
 .home-link {
@@ -435,6 +465,10 @@ summary:hover {
         padding-left: 0;
         margin: 0;
     }
+
+    .nav__list li {
+        margin-right: 15px;
+    }   
 
     .container {
         padding: 1rem;

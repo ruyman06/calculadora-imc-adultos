@@ -81,3 +81,4 @@ document.getElementById('action-form').addEventListener('submit', function (e) {
         void resultado.offsetWidth; // Trigger reflow
         resultado.style.animation = 'highlight 1s ease';
     });
+    
