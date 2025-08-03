@@ -77,23 +77,26 @@
                 ¿Quieres saber cuál es tu peso ideal según tu altura, edad y sexo. Nuestra calculadora de peso ideal gratuita te ayuda a descubrir el rango saludable recomendado por expertos, usando fórmulas médicas como Hamwi y Devine.  
             </p>  
         </div>
-        <form id="action-form">
-            <h2 class="calculadora--title">Calcula tu peso ideal</h2>
-            <label for="altura-input">Altura (cm): 
-                <input type="number" id="altura-input" min="0" max="250" value="150" class="container__input input--slider" step="1">
-                <input type="range" id="altura-slider" min="0" max="250" value="150" class="slider">
-            </label>
-            <label for="sexo">Sexo
-                <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
-                <option value="hombre">Hombre</option>
-                <option value="mujer">Mujer</option>
-            </select>
-            </label>
-            <label for="edad">Edad 
-                <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="0" max="110" required >
-            </label>
-            <button type="submit" class="container__submit">Calcular peso ideal</button>
-        </form>
+        
+        <section id="calculadora">
+            <form id="action-form">
+                <h2 class="calculadora--title">Calcula tu peso ideal</h2>
+                <label for="altura-input">Altura (cm): 
+                    <input type="number" id="altura-input" min="0" max="250" value="150" class="container__input input--slider" step="1">
+                    <input type="range" id="altura-slider" min="0" max="250" value="150" class="slider">
+                </label>
+                <label for="sexo">Sexo
+                    <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+                </label>
+                <label for="edad">Edad 
+                    <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="0" max="110" required >
+                </label>
+                <button type="submit" class="container__submit">Calcular peso ideal</button>
+            </form>
+        </section>
 
         <div id="resultado" class="resultado"></div>
 
@@ -102,71 +105,75 @@
         </p>
 
 
-        <h2 id="peso-ideal">¿Cuál es mi peso ideal?</h2>
-        <p class="explicacion">Tu peso ideal depende de varios factores: sexo, altura, edad, complexión corporal y nivel de actividad física. Aunque no existe un número mágico, sí hay rangos recomendados por la Organización Mundial de la Salud (OMS) que ayudan a evaluar tu estado de salud general. El peso ideal se define como aquel en el que tu cuerpo funciona óptimamente, con bajo riesgo de enfermedades relacionadas con el sobrepeso o la delgadez extrema..</p>
+        <section id="pesoideal">
+            <h2 id="peso-ideal">¿Cuál es mi peso ideal?</h2>
+            <p class="explicacion">Tu peso ideal depende de varios factores: sexo, altura, edad, complexión corporal y nivel de actividad física. Aunque no existe un número mágico, sí hay rangos recomendados por la Organización Mundial de la Salud (OMS) que ayudan a evaluar tu estado de salud general. El peso ideal se define como aquel en el que tu cuerpo funciona óptimamente, con bajo riesgo de enfermedades relacionadas con el sobrepeso o la delgadez extrema..</p>
+        </section>
 
+        <section id="limitations">
+            <h3>Limitaciones de esta calculadora</h3>
+                <p class="limitaciones">
+                    Esta calculadora es una herramienta orientativa y no sustituye la evaluación de un médico o nutricionista.
+                </p>
+            <ul>
+                <li><span class="bold--li">No diferencia entre grasa y masa muscular:</span> Personas muy musculosas pueden tener un IMC o peso alto sin tener exceso de grasa.</li>
+                <li><span class="bold--li">No considera la distribución de la grasa corporal:</span> La grasa abdominal es más peligrosa que la grasa acumulada en otras zonas.</li>
+                <li><span class="bold--li">No sustituye una evaluación médica profesional.</span></li>
+                <li><span class="bold--li">No indica el estado nutricional o físico general:</span> Una persona con un peso "ideal" puede estar desnutrida o tener problemas de salud relacionados con el sedentarismo.</li>
+                <li><span class="bold--li">Puede dar una falsa sensación de salud:</span> Aunque este dentro del rango normal no garantiza una buena salud cardiovascular o metabólica.</li>
+            </ul>
+        </section>
 
-        <h3>Limitaciones de esta calculadora</h3>
-        <p class="limitaciones">
-            Esta calculadora es una herramienta orientativa y no sustituye la evaluación de un médico o nutricionista.
-        </p>
-        <ul>
-            <li><span class="bold--li">No diferencia entre grasa y masa muscular:</span> Personas muy musculosas pueden tener un IMC o peso alto sin tener exceso de grasa.</li>
-            <li><span class="bold--li">No considera la distribución de la grasa corporal:</span> La grasa abdominal es más peligrosa que la grasa acumulada en otras zonas.</li>
-            <li><span class="bold--li">No sustituye una evaluación médica profesional.</span></li>
-            <li><span class="bold--li">No indica el estado nutricional o físico general:</span> Una persona con un peso "ideal" puede estar desnutrida o tener problemas de salud relacionados con el sedentarismo.</li>
-            <li><span class="bold--li">Puede dar una falsa sensación de salud:</span> Aunque este dentro del rango normal no garantiza una buena salud cardiovascular o metabólica.</li>
-        </ul>
+        <section id="peso-segun-altura">
+            <div class="aditional-text">
+                <h2>¿Cuál es el peso ideal para adultos según la altura?</h2>
+                <p class="ideal">El peso ideal varía entre personas, pero el IMC proporciona un rango saludable para cada altura. Este rango puede ayudarte a establecer objetivos realistas y prevenir problemas de salud como la hipertensión, diabetes tipo 2 o enfermedades cardiovasculares. Consulta con un profesional si necesitas una evaluación más precisa basada en tu composición corporal.</p>
+            </div>
+        </section>
 
-        <div class="aditional-text">
-            <h2>¿Cuál es el peso ideal para adultos según la altura?</h2>
-            <p class="ideal">El peso ideal varía entre personas, pero el IMC proporciona un rango saludable para cada altura. Este rango puede ayudarte a establecer objetivos realistas y prevenir problemas de salud como la hipertensión, diabetes tipo 2 o enfermedades cardiovasculares. Consulta con un profesional si necesitas una evaluación más precisa basada en tu composición corporal.</p>
+        <section id="consejos-peso">
+            <div class="consejos">
+                <h2 id="consejos">Consejos para mantener un IMC saludable</h2>
+                <p class="consejos--text">
+                    Mantener un Índice de Masa Corporal dentro del rango normal no solo es cuestión de peso, sino de bienestar general. Aquí tienes algunos consejos prácticos para lograr y mantener un peso saludable de forma sostenible.
+                </p>
+                <details>
+                    <summary><h3>Alimentacióm equilibrada</h3></summary>
+                    Mantén una dieta rica en frutas, verduras, proteínas magras y cereales integrales. Evita azúcares añadidos y grasas saturadas. Comer porciones adecuadas ayuda a mantener un peso saludable.
+                </details>
+                <details>
+                    <summary><h3>Actividad física regular</h3></summary>
+                    Se recomienda realizar al menos 150 minutos semanales de ejercicio moderado como caminar, nadar o montar en bicicleta. La actividad física ayuda a controlar el peso y mejora la salud cardiovascular.
+                </details>
+                <details>
+                    <summary><h3>Hidratación adecuada</h3></summary>
+                    Bebe suficiente agua durante el día. La hidratación es fundamental para el metabolismo y puede ayudarte a sentirte saciado, evitando el exceso de comida.
+                </details>
+                <details>
+                    <summary><h3>Sueño y manejo del estrés</h3></summary>
+                    Dormir bien y mantener el estrés bajo control también impacta en tu peso. La falta de sueño puede alterar las hormonas del apetito, y el estrés crónico puede llevar a comer en exceso.
+                </details>
+                <details>
+                    <summary><h3>Consulta médica</h3></summary>
+                    El Índice de Masa Corporal es solo un indicador general. Para una evaluación más precisa, consulta con un profesional de la salud que pueda considerar otros factores como la masa muscular o condiciones médicas.
+                </details>
+                <details>
+                    <summary><h3>Control y seguimiento</h3></summary>
+                    Pésate con regularidad, pero no te obsesiones. Usa nuestra herramienta para seguir tu evolución.
+                </details>
+            </div>
+        </section>
 
-            <h2>¿Cuál debería ser mi IMC?</h2>
-            <p class="respuesta">Un IMC entre 18.5 y 24.9 se considera normal en adultos. Sin embargo, factores como edad, sexo, composición corporal y genética también influyen.</p>
-        </div>
-
-        <div class="consejos">
-            <h2 id="consejos">Consejos para mantener un IMC saludable</h2>
-            <p class="consejos--text">
-                Mantener un Índice de Masa Corporal dentro del rango normal no solo es cuestión de peso, sino de bienestar general. Aquí tienes algunos consejos prácticos para lograr y mantener un peso saludable de forma sostenible.
+        <section id="consecuencias">
+            <h2 class="consecuencias">Consecuencias del sobrepeso y la obesidad</h2>
+            <p class="consecuencias--text">
+                Tener un IMC elevado puede estar relacionado con un mayor riesgo de padecer enfermedades cardiovasculares, hipertensión, diabetes tipo 2 o apnea del sueño. Mantener un peso saludable ayuda a prevenir estas condiciones y a mejorar la calidad de vida.
             </p>
-            <details>
-                <summary><h3>Alimentacióm equilibrada</h3></summary>
-                Mantén una dieta rica en frutas, verduras, proteínas magras y cereales integrales. Evita azúcares añadidos y grasas saturadas. Comer porciones adecuadas ayuda a mantener un peso saludable.
-            </details>
-            <details>
-                <summary><h3>Actividad física regular</h3></summary>
-                Se recomienda realizar al menos 150 minutos semanales de ejercicio moderado como caminar, nadar o montar en bicicleta. La actividad física ayuda a controlar el peso y mejora la salud cardiovascular.
-            </details>
-            <details>
-                <summary><h3>Hidratación adecuada</h3></summary>
-                Bebe suficiente agua durante el día. La hidratación es fundamental para el metabolismo y puede ayudarte a sentirte saciado, evitando el exceso de comida.
-            </details>
-            <details>
-                <summary><h3>Sueño y manejo del estrés</h3></summary>
-                Dormir bien y mantener el estrés bajo control también impacta en tu peso. La falta de sueño puede alterar las hormonas del apetito, y el estrés crónico puede llevar a comer en exceso.
-            </details>
-            <details>
-                <summary><h3>Consulta médica</h3></summary>
-                El Índice de Masa Corporal es solo un indicador general. Para una evaluación más precisa, consulta con un profesional de la salud que pueda considerar otros factores como la masa muscular o condiciones médicas.
-            </details>
-            <details>
-                <summary><h3>Control y seguimiento</h3></summary>
-                Pésate con regularidad, pero no te obsesiones. Usa nuestra herramienta para seguir tu evolución.
-            </details>
-        </div>
 
-
-        <h2 class="consecuencias">Consecuencias del sobrepeso y la obesidad</h2>
-        <p class="consecuencias--text">
-            Tener un IMC elevado puede estar relacionado con un mayor riesgo de padecer enfermedades cardiovasculares, hipertensión, diabetes tipo 2 o apnea del sueño. Mantener un peso saludable ayuda a prevenir estas condiciones y a mejorar la calidad de vida.
-        </p>
-
-        <p class="consecuencias--text consecuencias--text--2">
-            El exceso de peso aumenta la carga sobre las articulaciones, especialmente en las rodillas, caderas y columna vertebral, lo que puede provocar dolor crónico, desgaste articular y desarrollar artrosis precoz. También, diversos estudios han encontrado una relación entre el exceso de peso y un aumento en la incidencia de cánceres como el de mama, colon, endometrio, riñón y esófago. Además, el exceso de grasa favorece la aparición de irritaciones, infecciones y dermatitis en pliegues cutáneos, además de aumentar la sudoración y el riesgo de heridas que tardan en cicatrizar.
-        </p>
-
+            <p class="consecuencias--text consecuencias--text--2">
+                El exceso de peso aumenta la carga sobre las articulaciones, especialmente en las rodillas, caderas y columna vertebral, lo que puede provocar dolor crónico, desgaste articular y desarrollar artrosis precoz. También, diversos estudios han encontrado una relación entre el exceso de peso y un aumento en la incidencia de cánceres como el de mama, colon, endometrio, riñón y esófago. Además, el exceso de grasa favorece la aparición de irritaciones, infecciones y dermatitis en pliegues cutáneos, además de aumentar la sudoración y el riesgo de heridas que tardan en cicatrizar.
+            </p>
+        </section>
 
         <section id="faq" aria-label="Preguntas frecuentes sobre el IMC">
             <h2 class="faq--title">Preguntas frecuentes sobre el Peso Ideal</h2>
