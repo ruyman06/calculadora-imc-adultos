@@ -78,25 +78,23 @@
             </p>  
         </div>
         
-        <section id="calculadora">
-            <form id="action-form">
-                <h2 class="calculadora--title">Calcula tu peso ideal</h2>
-                <label for="altura-input">Altura (cm): 
-                    <input type="number" id="altura-input" min="0" max="250" value="150" class="container__input input--slider" step="1">
-                    <input type="range" id="altura-slider" min="0" max="250" value="150" class="slider">
-                </label>
-                <label for="sexo">Sexo
-                    <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
-                    <option value="hombre">Hombre</option>
-                    <option value="mujer">Mujer</option>
-                </select>
-                </label>
-                <label for="edad">Edad 
-                    <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="0" max="110" required >
-                </label>
-                <button type="submit" class="container__submit">Calcular peso ideal</button>
-            </form>
-        </section>
+        <form id="action-form">
+            <h2 class="calculadora--title">Calcula tu peso ideal</h2>
+            <label for="altura-input">Altura (cm): 
+                <input type="number" id="altura-input" min="0" max="250" value="150" class="container__input input--slider" step="1">
+                <input type="range" id="altura-slider" min="0" max="250" value="150" class="slider">
+            </label>
+            <label for="sexo">Seleccione su sexo
+                <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+            </select>
+            </label>
+            <label for="edad">Edad 
+                <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="0" max="110" required >
+            </label>
+            <button type="submit" class="container__submit">Calcular peso ideal</button>
+        </form>
 
         <div id="resultado" class="resultado"></div>
 

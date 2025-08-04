@@ -84,29 +84,27 @@
             </p>
         </div>
         
-        <section id="calculadora">
-            <form id="action-form">
-                <h2 class="calculadora--title">Calculadora del IMC</h2>
-                <label for="peso-input">Peso (kg):
-                    <input type="number" id="peso-input" min="5" max="200" value="30" step="0.1" class="container__input input--slider" required>
-                    <input type="range" id="peso-slider" min="5" max="200" value="30" class="slider" required>
-                </label>
-                <label for="altura-input">Altura (cm): 
-                    <input type="number" id="altura-input" min="40" max="250" value="100" class="container__input input--slider" step="1">
-                    <input type="range" id="altura-slider" min="40" max="250" value="100" class="slider">
-                </label>
-                <label for="sexo">Sexo
-                    <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
-                    <option value="mujer">Niña</option>
-                    <option value="hombre">Niño</option>
-                </select>
-                </label>
-                <label for="edad">Edad 
-                    <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="2" max="18" required >
-                </label>
-                <button type="submit" class="container__submit">Calcular IMC</button>
-            </form>
-        </section>
+        <form id="action-form">
+            <h2 class="calculadora--title">Calculadora del IMC</h2>
+            <label for="peso-input">Peso (kg):
+                <input type="number" id="peso-input" min="5" max="200" value="30" step="0.1" class="container__input input--slider" required>
+                <input type="range" id="peso-slider" min="5" max="200" value="30" class="slider" required>
+            </label>
+            <label for="altura-input">Altura (cm): 
+                <input type="number" id="altura-input" min="40" max="250" value="100" class="container__input input--slider" step="1">
+                <input type="range" id="altura-slider" min="40" max="250" value="100" class="slider">
+            </label>
+            <label for="sexo">Seleccione su sexo
+                <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
+                <option value="mujer">Niña</option>
+                <option value="hombre">Niño</option>
+            </select>
+            </label>
+            <label for="edad">Edad 
+                  <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="2" max="18" required >
+            </label>
+            <button type="submit" class="container__submit">Calcular IMC</button>
+        </form>
 
         <div id="resultado" class="resultado"></div>
 
