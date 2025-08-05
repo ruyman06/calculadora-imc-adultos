@@ -152,7 +152,7 @@ h1 {
     margin-bottom: 0;
 }
 
-.limitaciones, .calculo--text, .consecuencias--text {
+.limitaciones {
     margin: 0;
     margin-top: 10px;
 }
@@ -327,17 +327,6 @@ label {
     color: #263238;
     animation: fadeIn 0.5s ease-out;
     padding: 20px;
-}
-
-
-.resultado-linea {
-    font-size: 19px;
-}
-
-.resultado-text {
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 10px;
 }
 
 table {

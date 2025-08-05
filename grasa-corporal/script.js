@@ -87,8 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Mostrar resultado con el nuevo formato
     resultadoDiv.innerHTML = `
       <div class="resultado-contenido">
-        <h3 class="resultado-titulo">Resultado de grasa corporal</h3>
-        <p class="resultado-valor">${grasa}<span>%</span></p>
+        <p class="resultado-linea"><span class="resultado-text">Tu Porcentaje de grasa corporal:</span> ${grasa}%</p>
       </div>
     `;
     

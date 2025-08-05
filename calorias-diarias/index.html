@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Calorías Diarias Recomendadas Gratis</title>
+    <meta name="description" content="Calcula cuántas calorías necesitas al día según tu edad, peso, altura y nivel de actividad. ¡Fácil, rápido y gratis! Ideal para bajar, subir o mantener peso.">
+    <meta name="keywords" content="calculadora de calorías, calorías diarias recomendadas, cuántas calorías necesito, consumo calórico diario, calculadora nutricional, calorías por día, dieta personalizada">
+    <meta name="author" content="Ruyman Barbuzano Bethencourt">
+
+    <meta name="google-site-verification" content="np5JnMIK_DIqWDdBjxSXYgH0g4u2kfDh2risprPD_LU" />
+    <meta name="google-analytics" content="cookie_flags=SameSite=Lax; Secure; Path=/">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="canonical" href= "https://calculadoraimc.es/calorias-diarias/" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+    <!-- Estilo pagina web -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- CookieConsent script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+
+    <!-- Script  con lógica de consentimiento -->
+    <script src="../cookies-consent.js"></script>
+
+    <script type="application/ld+json">
+   {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Calculadora de Calorías Diarias Recomendadas",
+    "description": "Calcula tu consumo calórico ideal gratis según tu edad, peso, altura y actividad física. Herramienta útil para bajar, subir o mantener peso.",
+    "url": "https://calculadoraimc.es/calorias-diarias/",
+    "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "Calculadora de Calorías Diarias",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+        }
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Calculadora IMC",
+        "url": "https://calculadoraimc.es"
+    }
+    }
+    </script>
+
+</head>
+    
+<body id="top">
+    <header class="header">
+        <a href="../" class="home-link">
+           <span>Calculadora IMC</span>
+        </a> <!-- Nuevo enlace home -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="../#que-es-imc">Calorias Necesarias</a></li>
+                <li>
+                    <div class="selector-calculadoras">
+                        <button id="btn-selector">Calculadoras ▼</button>
+                        <div class="dropdown-menu">
+                            <a id="calc-op" href="../">IMC para adultos</a>
+                            <a id="calc-op" href="../imc-ninos-adolescentes/">IMC < 18 años</a>
+                            <a id="calc-op" href="../peso-ideal/">Peso Ideal</a>
+                            <a id="calc-op" href="../grasa-corporal/">Grasa corporal</a>
+                            <a id="calc-op" href="../tasa-metabolica-basal/">TMB</a>
+                            <a id="calc-op" href="./">Calorias Diarias</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">Blog</a></li>
+                <li><a href="#consejos">Consejos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <h1>Calculadora de Calorías Diarias Recomendadas</h1>
+        <div class="introduccion">
+            <p class="introduccion--text">
+                Conocer cuántas calorías necesitas al día es fundamental para alcanzar tus objetivos de salud: ya sea perder peso, ganarlo o simplemente mantenerlo. Nuestra calculadora de calorías diarias está diseñada para ayudarte a estimar tu requerimiento calórico ideal de forma precisa, teniendo en cuenta tu edad, peso, estatura, sexo y nivel de actividad física.
+            </p>
+        </div>
+        
+        <form id="action-form">
+            <h2 class="calculadora--title">Calculadora de Calorias Diarias</h2>
+
+            <label for="peso-input">Peso (kg):
+                <input type="number" id="peso-input" min="5" max="200" value="30" step="0.1" class="container__input input--slider" required>
+                <input type="range" id="peso-slider" min="5" max="200" value="30" class="slider" required>
+            </label>
+
+            <label for="altura-input">Altura (cm): 
+                <input type="number" id="altura-input" min="40" max="250" value="100" class="container__input input--slider" step="1">
+                <input type="range" id="altura-slider" min="40" max="250" value="100" class="slider">
+            </label>
+
+            <label for="sexo">Sexo
+                <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+            </label>
+
+            <label for="edad">Edad 
+                <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="2" max="90" required >
+            </label>
+
+            <label for="actividad">Nivel de actividad:
+                <select class="input--select" id="actividad" required>
+                    <option value="sedentario">Sedentario (poco o ningún ejercicio)</option>
+                    <option value="ligero">Ligero (ejercicio 1-3 días/semana)</option>
+                    <option value="moderado" selected>Moderado (ejercicio 3-5 días/semana)</option>
+                    <option value="intenso">Intenso (ejercicio 6-7 días/semana)</option>
+                    <option value="atleta">Atleta (ejercicio 2 veces/día o trabajo físico)</option>
+                </select>
+            </label>
+
+            <label for="objetivo">Objetivo:
+                <select class="input--select" id="objetivo" required>
+                    <option value="perder">Perder peso</option>
+                    <option value="mantener" selected>Mantener peso</option>
+                    <option value="ganar">Ganar peso/músculo</option>
+                </select>
+            </label>
+
+            <button type="submit" class="container__submit">Calcular Calorias</button>
+        </form>
+
+        <div id="resultado" class="resultado"></div>
+
+        <p class="disclaimer">
+    ⚠️      <span class="bold--li">Importante:</span> Esta calculadora es una herramienta informativa. No sustituye el diagnóstico de un profesional médico. Consulte a su doctor antes de tomar decisiones sobre su salud.
+        </p>
+
+        <section id="imc-ninos">
+            <h2 id="que-es-imc">¿Cuántas calorías necesito al día?</h2>
+            <p class="explicacion">
+                La cantidad de calorías que una persona necesita diariamente depende de varios factores individuales, pero en general, se puede estimar mediante ecuaciones científicas como la de Harris-Benedict o Mifflin-St Jeor. Estas ecuaciones calculan la Tasa Metabólica Basal (TMB), es decir, la cantidad de energía que tu cuerpo necesita en reposo para mantener funciones vitales como respirar, hacer circular la sangre o regular la temperatura corporal.
+            </p>
+            
+            <p class="explicacion explicacion--2">
+                A esta cifra se le suma un factor de actividad física para obtener el Total Daily Energy Expenditure (TDEE), o gasto calórico total diario.
+            </p>
+            
+        </section>
+
+        <section id="limitaciones-imc">
+            <h3>Factores que influyen en el gasto calórico</h3>
+            <p class="limitaciones">
+                El gasto calórico diario no es una cifra fija, ya que varía en función de diversos factores:
+            </p>
+            <ul>
+                <li><span class="bold--li">Edad: </span>A medida que envejecemos, nuestro metabolismo se vuelve más lento. Un adulto joven quema más calorías en reposo que una persona mayor, incluso con el mismo peso y altura.</li>
+                <li><span class="bold--li">Sexo: </span>Los hombres suelen tener más masa muscular que las mujeres, lo que incrementa el gasto calórico basal. Por ello, tienden a necesitar más calorías.</li>
+                <li><span class="bold--li">Peso y estatura: </span>Personas más grandes o con mayor peso corporal tienden a requerir más energía para funcionar, especialmente si tienen una proporción alta de masa muscular.</li>
+                <li><span class="bold--li">Nivel de actividad física: </span>Cuanto más te mueves, más energía necesitas. No es lo mismo una persona sedentaria que alguien que entrena varias veces por semana.</li>
+                <li><span class="bold--li">Composición corporal: </span>Tener más músculo que grasa implica un mayor gasto calórico incluso en reposo, ya que el músculo es un tejido metabólicamente activo.</li>
+                <li><span class="bold--li">Factores hormonales y genéticos: </span>Las hormonas como la tiroides, la insulina o el cortisol también afectan tu metabolismo. Algunas personas queman calorías más rápido que otras debido a su genética.</li>
+            </ul>
+
+        <section id="consejos-padres-ninos-adolescentes">
+            <div class="consejos">
+                <h2 id="consejos">Consejos para ajustar tu ingesta calórica</h2>
+                <p class="consejos--text">
+                   Ajustar la cantidad de calorías que consumes no significa hacer dietas extremas. Aquí tienes algunas recomendaciones saludables:
+                </p>
+                <details>
+                    <summary><h3>No bajes demasiado las calorías</h3></summary>
+                    Consumir muy pocas calorías puede ralentizar tu metabolismo y provocar efectos negativos en tu salud (fatiga, pérdida de músculo, hambre excesiva).
+                </details>
+                <details>
+                    <summary><h3>Prioriza alimentos nutritivos</h3></summary>
+                    Elige alimentos ricos en nutrientes y evita calorías vacías como las bebidas azucaradas, la comida ultraprocesada y los snacks altos en grasas trans.
+                </details>
+                <details>
+                    <summary><h3>Ajusta gradualmente</h3></summary>
+                    Reduce o aumenta entre 300 y 500 calorías por día para obtener resultados sostenibles sin afectar tu energía ni tu metabolismo.
+                </details>
+                <details>
+                    <summary><h3>Escucha a tu cuerpo</h3></summary>
+                    El hambre, la saciedad, el rendimiento y el estado de ánimo también son indicadores importantes de si tu ingesta calórica está alineada con tus necesidades.
+                </details>
+                <details>
+                    <summary><h3>Combina con ejercicio</h3></summary>
+                    La actividad física te ayuda a quemar más calorías, preservar masa muscular y mejorar la salud general. Es un excelente complemento a cualquier ajuste nutricional.
+                </details>
+            </div>
+        </section>
+
+        <section id="calorias">
+            <h2 class="consecuencias">¿Qué significa "necesitar calorías"?</h2>
+            <p class="consecuencias--text">
+                Las calorías son la unidad de energía que tu cuerpo utiliza para funcionar. Cada vez que respiras, caminas, digieres alimentos o piensas, estás quemando calorías. Por eso, conocer cuántas calorías necesitas es clave para mantener una buena salud, evitar el sobrepeso o la desnutrición, y alcanzar tus metas físicas.
+            </p>
+            <h3>¿Qué ocurre si consumo más o menos calorías?</h3>
+            <ul>
+                <li><span class="bold--li">Exceso de calorías:</span> Si comes más calorías de las que gastas, tu cuerpo almacenará ese exceso como grasa corporal, lo que puede llevar al aumento de peso con el tiempo.</li>
+                <li><span class="bold--li">Déficit calórico:</span> Si consumes menos calorías de las que necesitas, tu cuerpo usará sus reservas (grasas y musculares), provocando una pérdida de peso.</li>
+            </ul>
+        </section>
+
+        <section id="faq" aria-label="Preguntas frecuentes sobre el IMC">
+            <h2 class="faq--title">Preguntas frecuentes sobre el consumo de calorías</h2>
+            <dl>
+                <dt><h3>¿Qué pasa si como menos calorías de las que necesito?</h3></dt>
+                <dd>
+                    Si estás en un déficit calórico, tu cuerpo usará sus reservas de energía (grasa y/o músculo) para funcionar. Esto puede ayudarte a perder peso, pero si el déficit es excesivo o prolongado, puede tener efectos negativos.
+                </dd>
+
+                <dt><h3>¿Puedo perder peso solo contando calorías?</h3></dt>
+                <dd>
+                    Contar calorías es una herramienta útil, pero no lo es todo. La calidad de los alimentos, la distribución de macronutrientes y tus hábitos generales también importan.
+                </dd>
+
+                <dt><h3>¿Las calorías de todos los alimentos son iguales?</h3></dt>
+                <dd>
+                    Técnicamente sí, pero el efecto en tu cuerpo varía. Por ejemplo, 200 calorías de brócoli aportan nutrientes valiosos, mientras que 200 calorías de refresco solo añaden azúcar.
+                </dd>
+
+                <dt><h3>¿Cada cuánto debo recalcular mis calorías?</h3></dt>
+                <dd>
+                    Cada vez que cambies de peso, nivel de actividad o tu objetivo (como pasar de perder a mantener peso), es recomendable recalcular tu consumo calórico ideal.
+                </dd>
+            </dl>
+        </section>
+        
+        <section id="referencias" aria-label="Referencias">
+            <h3>Referencias científicas y fuentes</h3>
+            <ul>
+                <li>Mifflin, M.D., St Jeor, S.T., et al. (1990). "A new predictive equation for resting energy expenditure in healthy individuals."</li>
+                <li>Harris, J.A., & Benedict, F.G. (1919). "A Biometric Study of Basal Metabolism in Man."</li>
+                <li>FAO/WHO/UNU. (2004). "Human Energy Requirements."</li>
+                <li>Mayo Clinic: <a href="https://www.mayoclinic.org">https://www.mayoclinic.org</a></li>
+                <li>CDC - Centers for Disease Control and Prevention: <a href="https://www.cdc.gov">https://www.cdc.gov</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Calculadora IMC.</p>
+        <p>
+            <a href="../aviso-legal/">Aviso legal</a> | 
+            <a href="../politica-privacidad/">Política de privacidad</a> | 
+            <a href="mailto:ruymanbarbuzano200@gmail.com" id="contacto">Contacto</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

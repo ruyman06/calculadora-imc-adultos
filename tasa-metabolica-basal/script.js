@@ -54,8 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar resultado con formato
     resultadoDiv.innerHTML = `
       <div class="resultado-contenido">
-        <h3 class="resultado-titulo">Tu Tasa Metabólica Basal:</h3>
-        <p class="resultado-valor">${Math.round(tmb)} kcal/día</p>
+        <p class="resultado-linea"><span class="resultado-text">Tu Tasa Metabólica Basal: </span> ${Math.round(tmb)} kcal/día</p>
       </div>
     `;
     

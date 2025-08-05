@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const imcMax = (altura * altura * 24.9 / 10000).toFixed(1);
         
         mostrarOutput(`
-            <h3>Peso ideal: <strong>${pesoIdeal.toFixed(1)} kg</strong></h3>
-            <p>Rango saludable (IMC 18.5-24.9): <strong>${imcMin} - ${imcMax} kg</strong></p>
+            <h3>Peso ideal: ${pesoIdeal.toFixed(1)} kg</h3>
+            <p>Rango saludable (IMC 18.5-24.9): ${imcMin} - ${imcMax} kg</p>
         `, 'exito');
     }
 
@@ -117,9 +117,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="resultado-nino">
                 <h3>Percentiles OMS para ${sexo === 'hombre' ? 'niños' : 'niñas'} de ${edad} años:</h3>
                 <ul>
-                    <li><strong>P3 (Bajo peso):</strong> ${percentil.P3} kg</li>
-                    <li><strong>P50 (Medio):</strong> ${percentil.P50} kg</li>
-                    <li><strong>P97 (Alto):</strong> ${percentil.P97} kg</li>
+                    <li>P3 (Bajo peso): ${percentil.P3} kg</li>
+                    <li>P50 (Medio): ${percentil.P50} kg</li>
+                    <li><strong>P97 (Alto): ${percentil.P97} kg</li>
                 </ul>
                 <p class="nota">* Estos valores son referenciales. Consulte a su pediatra.</p>
             </div>
