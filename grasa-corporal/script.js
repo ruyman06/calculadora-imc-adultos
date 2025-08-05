@@ -3,11 +3,11 @@ const pesoInput = document.getElementById('peso-input');
 const pesoSlider = document.getElementById('peso-slider');
 
 pesoSlider.addEventListener('input', () => {
-  pesoInput.value = pesoSlider.value; // Slider -> Input
+  pesoInput.value = pesoSlider.value;
 });
 
 pesoInput.addEventListener('input', () => {
-  pesoSlider.value = pesoInput.value; // Input -> Slider
+  pesoSlider.value = pesoInput.value;
 });
 
 // Sincronización Altura: Input <-> Slider
@@ -15,11 +15,11 @@ const alturaInput = document.getElementById('altura-input');
 const alturaSlider = document.getElementById('altura-slider');
 
 alturaSlider.addEventListener('input', () => {
-  alturaInput.value = alturaSlider.value; // Slider -> Input
+  alturaInput.value = alturaSlider.value;
 });
 
 alturaInput.addEventListener('input', () => {
-  alturaSlider.value = alturaInput.value; // Input -> Slider
+  alturaSlider.value = alturaInput.value;
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const sexo = sexoInput.value;
 
     if (!peso || !altura || !edad || !sexo) {
-      resultadoDiv.innerHTML = `<p style="color:red;">Por favor, completa todos los campos obligatorios.</p>`;
+      resultadoDiv.innerHTML = `<p class="error-message">Por favor, completa todos los campos obligatorios.</p>`;
+      resultadoDiv.classList.remove('activo');
       return;
     }
 
@@ -60,12 +61,13 @@ document.addEventListener('DOMContentLoaded', function () {
         ? (1.20 * imc) + (0.23 * edad) - 16.2
         : (1.20 * imc) + (0.23 * edad) - 5.4;
     } else {
-      // Fórmula US Navy (solo con cintura y cuello)
+      // Fórmula US Navy
       const cintura = parseFloat(document.getElementById('cintura-input').value);
       const cuello = parseFloat(document.getElementById('cuello-input').value);
 
       if (!cintura || !cuello) {
-        resultadoDiv.innerHTML = `<p style="color:red;">Completa también las medidas de cintura y cuello.</p>`;
+        resultadoDiv.innerHTML = `<p class="error-message">Completa también las medidas de cintura y cuello.</p>`;
+        resultadoDiv.classList.remove('activo');
         return;
       }
 
@@ -81,7 +83,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     grasa = grasa.toFixed(2);
-
-    resultadoDiv.innerHTML = `<p>Tu porcentaje estimado de grasa corporal es: ${grasa}%</p>`;
+    
+    // Mostrar resultado con el nuevo formato
+    resultadoDiv.innerHTML = `
+      <div class="resultado-contenido">
+        <h3 class="resultado-titulo">Resultado de grasa corporal</h3>
+        <p class="resultado-valor">${grasa}<span>%</span></p>
+      </div>
+    `;
+    
+    // Activar los estilos
+    resultadoDiv.classList.add('activo');
+    
+    // Scroll mínimo y preciso
+    const resultadoPos = resultadoDiv.getBoundingClientRect().top + window.scrollY - (window.innerHeight * 0.4);
+    window.scrollTo({
+      top: resultadoPos,
+      behavior: 'smooth'
+    });
   });
 });

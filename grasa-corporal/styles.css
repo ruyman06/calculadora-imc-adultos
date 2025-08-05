@@ -320,15 +320,30 @@ label {
     cursor: pointer;
 }
 
-.resultado {
+#resultado {
     min-width: 200px;
     max-width: 500px;
-    width: 50%;
     font-size: 18px;
     color: #212121;
-    margin-top: 10px;
-    padding: 20px;
+    margin-top: 20px;
+    font-weight: 300;
+    font-family: inherit;
     border-radius: 15px;
+    margin-top: 20px;
+    width: 50%;
+}
+
+#resultado p {
+    font-size: 20px;
+}
+
+#resultado.activo {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px #0005;
+    color: #263238;
+    animation: fadeIn 0.5s ease-out;
+    padding: 20px;
 }
 
 table {
@@ -493,7 +508,7 @@ summary:hover {
         width: 100%;
     }
 
-    .resultado {
+    #resultado {
         width: 100%;
     }
 

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Tasa Metabólica Basal (TMB) | Descubre Tus Calorías Diarias</title>
+    <meta name="description" content="Calcula tu Tasa Metabólica Basal (TMB) gratis y descubre cuántas calorías quema tu cuerpo en reposo. Herramienta precisa con fórmulas Harris-Benedict y Mifflin-St Jeor. ¡Optimiza tu dieta y plan fitness!">
+    <meta name="keywords" content="calculadora TMB, tasa metabólica basal, calcular calorías diarias, metabolismo en reposo, Harris-Benedict, Mifflin-St Jeor, calorías quemadas, bajar de peso, dieta saludable, calculadora metabolismo">
+    <meta name="author" content="Ruyman Barbuzano Bethencourt">
+
+    <meta name="google-site-verification" content="np5JnMIK_DIqWDdBjxSXYgH0g4u2kfDh2risprPD_LU" />
+    <meta name="google-analytics" content="cookie_flags=SameSite=Lax; Secure; Path=/">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="canonical" href= "https://calculadoraimc.es/tasa-metabolica-basal/" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+    <!-- Estilo pagina web -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- CookieConsent script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+
+    <!-- Script  con lógica de consentimiento -->
+    <script src="../cookies-consent.js"></script>
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de Tasa Metabólica Basal (TMB)",
+    "description": "Calcula tu TMB y descubre las calorías que tu cuerpo necesita en reposo según tu edad, peso, altura y género.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+    },
+    "creator": {
+        "@type": "Organization",
+        "name": "[Tu Marca]",
+        "url": "https://tudominio.com"
+    }
+    }
+    </script>
+
+</head>
+    
+<body id="top">
+    <header class="header">
+        <a href="../" class="home-link">
+           <span>Calculadora IMC</span>
+        </a> <!-- Nuevo enlace home -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="../#que-es-imc">¿Qué es la TMB?</a></li>
+                <li>
+                    <div class="selector-calculadoras">
+                        <button id="btn-selector">Calculadoras ▼</button>
+                        <div class="dropdown-menu">
+                            <a id="calc-op" href="../">IMC para adultos</a>
+                            <a id="calc-op" href="../imc-ninos-adolescentes/">IMC < 18 años</a>
+                            <a id="calc-op" href=".">Peso Ideal</a>
+                            <a id="calc-op" href="../grasa-corporal/">Grasa corporal</a>
+                            <a id="calc-op" href="./">TMB</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#tabla-imc">Tabla Percentiles OMS</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="#consejos">Consejos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <h1>Calculadora TMB(Tasa Metábolica Basal)</h1>
+        <div class="introduccion">
+            <p class="introduccion--text">
+                Conocer tu Tasa Metabólica Basal es el primer paso para entender cuántas calorías necesita tu cuerpo en reposo para funcionar correctamente. Esta cifra te ayudará a planificar mejor tu alimentación y actividad física, adaptándolas a tus objetivos, ya sea perder peso, ganar músculo o mantenerte saludable. Usa la calculadora a continuación para obtener una estimación personalizada de tu TMB.
+            </p>
+        </div>
+        
+    
+        <form id="action-form">
+            <h2 class="calculadora--title">Calculadora de la TMB</h2>
+            <label for="peso-input">Peso (kg):
+                <input type="number" id="peso-input" min="5" max="200" value="30" step="0.1" class="container__input input--slider" required>
+                <input type="range" id="peso-slider" min="5" max="200" value="30" class="slider" required>
+            </label>
+            <label for="altura-input">Altura (cm): 
+                <input type="number" id="altura-input" min="40" max="250" value="100" class="container__input input--slider" step="1">
+                <input type="range" id="altura-slider" min="40" max="250" value="100" class="slider">
+            </label>
+            <label for="sexo">Sexo
+                <select class="input--select" id="sexo" aria-label="Selecciona tu sexo" required>
+                <option value="mujer">Mujer</option>
+                <option value="hombre">Hombre</option>
+            </select>
+            </label>
+            <label for="edad">Edad 
+                <input class="container__input" placeholder="Edad en años" type="number" id="edad" min="2" max="80" required >
+            </label>
+            <button type="submit" class="container__submit">Calcular TMB</button>
+        </form>
+    
+
+        <div id="resultado" class="resultado"></div>
+
+        <p class="disclaimer">
+    ⚠️      <span class="bold--li">Importante:</span> Esta calculadora es una herramienta informativa. No sustituye el diagnóstico de un profesional médico. Consulte a su doctor antes de tomar decisiones sobre su salud.
+        </p>
+
+        <section id="imc-ninos">
+            <h2 id="que-es-imc">¿Qué es la TMB?</h2>
+            <p class="explicacion">
+                La Tasa Metabólica Basal, conocida por sus siglas TMB, es la cantidad mínima de energía (calorías) que el cuerpo necesita para mantenerse con vida en estado de reposo absoluto. Esto significa que incluso si no hicieras ningún tipo de actividad durante el día, tu cuerpo seguiría quemando calorías simplemente para mantener funciones vitales como respirar, hacer que el corazón lata, mantener la temperatura corporal, hacer funcionar los órganos internos y permitir la actividad del sistema nervioso.
+            </p>
+            
+            <p class="explicacion explicacion--2">
+                La TMB representa, en la mayoría de las personas, entre el 60% y el 75% del gasto calórico total diario. Es un valor fundamental para entender cómo funciona tu metabolismo y es el punto de partida para calcular tus necesidades energéticas diarias. Si quieres perder, ganar o mantener peso, conocer tu TMB es esencial.
+            </p>        
+        </section>
+
+        <section id="limitaciones-imc">
+            <h3>¿Qué influye en tu metabolismo?</h3>
+            <p class="limitaciones">
+                La TMB puede variar según muchos factores, algunos de los cuales puedes controlar, y otros no:
+            </p>
+            <ul>
+                <li><span class="bold--li">Edad: </span>A medida que envejecemos, el metabolismo se ralentiza.</li>
+                <li><span class="bold--li">Sexo: </span>Como vimos, los hombres suelen tener una TMB más alta.</li>
+                <li><span class="bold--li">Composición corporal: </span>Más músculo = más gasto calórico.</li>
+                <li><span class="bold--li">Genética: </span>Algunas personas tienen un metabolismo naturalmente más rápido.</li>
+                <li><span class="bold--li">Hormonas: </span>Trastornos como el hipotiroidismo pueden disminuir la TMB.</li>
+                <li><span class="bold--li">Temperatura corporal y ambiente: </span>En frío o fiebre, el cuerpo puede aumentar el gasto energético.</li>
+                <li><span class="bold--li">Estado fisiológico: </span>El embarazo o la lactancia pueden elevar la TMB.</li>
+            </ul>
+        </section>
+
+        <section id="calculo">
+            <h3 class="calculo">¿Cómo se calcula?</h3>
+            <p class="calculo--text">
+                La TMB se calcula a partir de fórmulas matemáticas que tienen en cuenta variables personales como la edad, el sexo, el peso y la altura. Estas fórmulas fueron desarrolladas por investigadores que analizaron el gasto energético basal en distintas poblaciones. Aunque se pueden usar distintos métodos, todos parten del mismo objetivo: estimar cuántas calorías quema tu cuerpo sin actividad. Por ejemplo, una persona joven, alta y con más masa muscular tenderá a tener una TMB más alta que una persona mayor, baja y con menos músculo. Esto se debe a que los músculos consumen más energía que la grasa, incluso en reposo.
+            </p>
+            <ul>
+                <li>
+                    <span class="bold--li">Harris-Benedict.</span> Se basa en peso, altura, edad y sexo. A pesar de ser antigua, aún se emplea porque proporciona una estimación bastante fiable para la mayoría de las personas.
+                    <ul>
+                        <li>Hombres: TMB = 66.5 + (13.75 × peso en kg) + (5.003 × altura en cm) - (6.755 × edad en años)</li>
+                        <li>Mujeres: TMB = 655.1 + (9.563 × peso en kg) + (1.850 × altura en cm) - (4.676 × edad en años)</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <span class="bold--li">Mifflin-St Jeor.</span> Esta fórmula es más moderna (1990) y actualmente se considera más precisa, sobre todo en personas con sobrepeso u obesidad. Muchos expertos en nutrición y salud la prefieren.
+                    <ul>
+                        <li>Hombres: TMB = (10 × peso en kg) + (6.25 × altura en cm) - (5 × edad en años) + 5</li>
+                        <li>Mujeres: TMB = (10 × peso en kg) + (6.25 × altura en cm) - (5 × edad en años) - 161</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        
+        <div class="aviso">
+            <p>⚠️ Nota: esta calculadora está diseñada para niños y adolescentes entre 2 y 18 años.</p>
+        </div>
+
+        <section id="consejos-padres-ninos-adolescentes">
+            <div class="consejos">
+                <h2 id="consejos">¿Cómo ayudar a tu hijo a mantener un peso saludable?</h2>
+                <p class="consejos--text">
+                   Una vez conoces tu Tasa Metabólica Basal (TMB), puedes usarla como una herramienta poderosa para mejorar tu salud, tu energía diaria y tus resultados físicos. Sin embargo, saber el número no basta: lo importante es cómo lo aplicas a tu vida diaria. Aquí te dejamos algunos consejos prácticos y efectivos:
+                </p>
+                <details>
+                    <summary><h3>No comas por debajo de tu TMB durante periodos prolongados</h3></summary>
+                    Reducir calorías puede ayudarte a perder peso, pero nunca deberías consumir menos calorías que tu TMB de forma sostenida. Hacerlo puede ralentizar tu metabolismo, hacerte perder masa muscular y generar fatiga, ansiedad o efectos rebote. Es mejor crear un déficit controlado a partir del gasto total (TMB × actividad).
+                </details>
+                <details>
+                    <summary><h3>Aumenta tu masa muscular para elevar tu TMB</h3></summary>
+                    El músculo es metabólicamente más activo que la grasa: más músculo = más calorías quemadas incluso en reposo. Incorporar ejercicios de fuerza o resistencia (pesas, calistenia, bandas elásticas) en tu rutina puede ayudarte a elevar tu TMB de forma natural y saludable.
+                </details>
+                <details>
+                    <summary><h3>Evita el sedentarismo prolongado</h3></summary>
+                    Aunque la TMB se calcula en reposo, tu gasto calórico total depende mucho de tu nivel de actividad diaria. Si pasas muchas horas sentado, intenta levantarte y moverte cada hora, subir escaleras, caminar o hacer pausas activas. Pequeños movimientos frecuentes marcan la diferencia.
+                </details>
+                <details>
+                    <summary><h3>Prioriza el descanso y el buen sueño</h3></summary>
+                    Dormir bien es clave para mantener tu metabolismo en equilibrio. La falta de sueño puede reducir tu TMB, alterar hormonas como la grelina (hambre) y la leptina (saciedad) y dificultar la pérdida de grasa. Apunta a 7–9 horas de sueño de calidad por noche.
+                </details>
+                <details>
+                    <summary><h3>Incluye suficiente proteína en tu dieta</h3></summary>
+                    La digestión de proteínas requiere más energía que la de carbohidratos o grasas, lo que se conoce como efecto térmico de los alimentos. Además, la proteína ayuda a conservar la masa muscular en procesos de pérdida de peso. Intenta incluir fuentes de proteína magra en cada comida.
+                </details>
+                <details>
+                    <summary><h3>Revisa tu TMB si cambias de peso o estilo de vida</h3></summary>
+                    Tu TMB no es un valor fijo para siempre. Si subes o bajas mucho de peso, cambias tu nivel de actividad o tu masa muscular, conviene recalcular tu TMB para ajustar tus calorías a tu nueva situación. Una revisión cada 2–3 meses suele ser suficiente.
+                </details>
+                <details>
+                    <summary><h3> No te obsesiones con el número, úsalo como guía</h3></summary>
+                    La TMB es una estimación útil, pero no es exacta al 100%. Úsala como una herramienta de referencia, no como una regla rígida. Escucha también a tu cuerpo, observa tus resultados y ajusta según cómo te sientas y progreses.
+                </details>
+            </div>
+        </section>
+
+        <section id="consecuencias-obesidad">
+            <h2 class="consecuencias">Diferencias entre hombres y mujeres</h2>
+            <p class="consecuencias--text">
+                El metabolismo de hombres y mujeres no es igual, y eso se refleja también en la TMB. En promedio, los hombres tienen una TMB más alta que las mujeres. Esto se debe principalmente a diferencias fisiológicas:
+            </p>
+            <ul>
+                <li><span class="bold--li">Mayor masa muscular: </span>Los hombres tienden a tener más músculo, lo cual eleva su gasto calórico incluso en reposo.</li>
+                <li><span class="bold--li">Menor porcentaje de grasa corporal: </span>La grasa quema menos calorías que el músculo.</li>
+                <li><span class="bold--li">Hormonas: </span>La testosterona, presente en niveles más altos en los hombres, favorece la construcción de masa muscular y el gasto calórico.</li>
+            </ul>
+        </section>
+
+        <section id="faq" aria-label="Preguntas frecuentes sobre el IMC">
+            <h2 class="faq--title">Preguntas frecuentes sobre el IMC</h2>
+            <dl>
+                <dt><h3>¿La TMB es igual todos los días?</h3></dt>
+                <dd>
+                    No exactamente. Aunque no varía mucho, factores como el sueño, el estrés, la alimentación y el estado hormonal pueden influir ligeramente en tu metabolismo basal.
+                </dd>
+
+                <dt><h3>¿Puedo aumentar mi TMB?</h3></dt>
+                <dd>
+                    Sí. Ganar masa muscular, dormir bien, moverte más durante el día y consumir suficiente proteína pueden ayudar a elevar tu metabolismo basal.
+                </dd>
+
+                <dt><h3>¿La TMB sirve para calcular dietas?</h3></dt>
+                <dd>
+                    Es el punto de partida. A partir de la TMB puedes estimar cuántas calorías necesitas al día según tu actividad, lo cual es esencial para crear un plan nutricional efectivo.
+                </dd>
+
+                <dt><h3>¿Es más fiable que el IMC?</h3></dt>
+                <dd>
+                    No se comparan directamente. El IMC evalúa tu peso en relación a tu altura, mientras que la TMB analiza tu gasto energético en reposo. Ambos datos se complementan.
+                </dd>
+
+                <dt><h3>¿Se puede calcular sin saber la grasa corporal?</h3></dt>
+                <dd>
+                    Sí. Las fórmulas comunes (Harris-Benedict, Mifflin-St Jeor) no requieren conocer el porcentaje de grasa corporal. Además, puedes usar <a href="../grasa-corporal/">la calculadora de grasa corporal</a>.
+                </dd>
+            </dl>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Calculadora IMC.</p>
+        <p>
+            <a href="../aviso-legal/">Aviso legal</a> | 
+            <a href="../politica-privacidad/">Política de privacidad</a> | 
+            <a href="mailto:ruymanbarbuzano200@gmail.com" id="contacto">Contacto</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
