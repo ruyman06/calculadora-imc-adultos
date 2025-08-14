@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
     <meta name="keywords" content="">
     <meta name="author" content="Ruyman Barbuzano Bethencourt">
 
-    <meta name="google-site-verification" content="np5JnMIK_DIqWDdBjxSXYgH0g4u2kfDh2risprPD_LU" />
+    <meta name="google-site-verification" content="np5JnMIK_DIqWDdBjxSXYgH0g4u2kfDh3risprPD_LU" />
     <meta name="google-analytics" content="cookie_flags=SameSite=Lax; Secure; Path=/">
 
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-blog.css">
 
      <!-- CookieConsent script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
@@ -35,24 +35,155 @@
                     <div class="selector-calculadoras">
                         <button id="btn-selector">Calculadoras ▼</button>
                         <div class="dropdown-menu">
-                            <a id="calc-op" href="../">IMC para adultos</a>
-                            <a id="calc-op" href="../imc-ninos-adolescentes/">IMC < 18 años</a>
-                            <a id="calc-op" href="../peso-ideal/">Peso Ideal</a>
-                            <a id="calc-op" href="../grasa-corporal/">Grasa corporal</a>
-                            <a id="calc-op" href="../tasa-metabolica-basal/">TMB</a>
-                            <a id="calc-op" href="../calorias-diarias/">Calorias Diarias</a>
+                            <a id="calc-op" href="../../../">IMC para adultos</a>
+                            <a id="calc-op" href="../../../imc-ninos-adolescentes/">IMC < 18 años</a>
+                            <a id="calc-op" href="../../../peso-ideal/">Peso Ideal</a>
+                            <a id="calc-op" href="../../../grasa-corporal/">Grasa corporal</a>
+                            <a id="calc-op" href="../../../tasa-metabolica-basal/">TMB</a>
+                            <a id="calc-op" href="../../../calorias-diarias/">Calorias Diarias</a>
                         </div>
                     </div>
                 </li>
                 <li><a href="./">Blog</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href=""></a></li>
+                <li><input type="text" placeholder="Búscar en el blog..."></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
-        
+        <h1>Artículos sobre Salud, Nutrición y Cálculo de IMC</h1>
+        <div class="grid-secciones">
+            <section id="imc-peso" aria-label="Núcleo Principal (IMC y Peso)">
+                <h2>IMC y Peso</h2>
+                <img src="IMAGENES/IMC.webp" alt="Artículos sobre cálculo de IMC, rangos saludables, diferencias entre grasa y músculo, y cómo interpretar resultados.">
+                <div class="seccion__blog">
+                    <a href="imc-peso-corporal/">
+                        <h3>IMC y Peso Corporal</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="obesidad-sobrepeso/">
+                        <h3>Obesidad y Sobrepeso</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="perdida-de-peso/">
+                        <h3>Pérdida de Peso Saludable</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="masa-muscular/">
+                        <h3>Aumento de Masa Muscular</h3>
+                    </a>
+                </div>
+            </section>
+
+            <section id="nutricion" aria-label="nutricion y dietas">
+                <h2>Nutrición y Dietas</h2>
+                <img src="IMAGENES/NUTRICION.webp" alt="Guías de alimentación, dietas efectivas, superalimentos y errores comunes al comer.">
+                <div class="seccion__blog">
+                    <a href="dietas-efectivas/">
+                        <h3>Dietas Efectivas</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="alimentos-funcionales/">
+                        <h3>Alimentos Funcionales</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="nutricion-deportiva/">
+                        <h3>Nutrición Deportiva</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="habitos-alimenticios/">
+                        <h3>Hábitos Alimenticios</h3>
+                    </a>
+                </div>
+            </section>
+
+            <section id="ejercicio" aria-label="ejercicio y fitness">
+                <h2>Ejercicio y Fitness</h2>
+                <img src="IMAGENES/EJERCICIO.webp" alt="Rutinas para bajar peso, ganar músculo, ejercicios en casa y consejos para principiantes.">
+                <div class="seccion__blog">
+                    <a href="entrenamientos-en-casa/">
+                        <h3>Entrenamiento en Casa</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="fuerza-musculacion/">
+                        <h3>Fuerza y Musculación</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="ejercicios-mujeres/">
+                        <h3>Ejercicio para Mujeres</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="articularidad-movilidad/">
+                        <h3>Salud Articular y Movilidad</h3>
+                    </a>
+                </div>
+            </section>
+
+            <section id="metabolismo" aria-label="salud metabólica y hormonal">
+                <h2>Salud Metabólica y Hormonal</h2>
+                <img src="IMAGENES/DIABETES.webp" alt="Diabetes, tiroides, resistencia a la insulina y cómo afectan al peso.">
+                <div class="seccion__blog">
+                    <a href="diabetes/">
+                        <h3>Diabetes y Resistencia a la Insulina</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="tiroides-metabolismo/">
+                        <h3>Tiroides y Metabolismo</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="salud-intestinal-microbiota/">
+                        <h3>Salud Intestinal y Microbiota</h3>
+                    </a>
+                </div>
+            </section>
+
+            <section id="grupos" aria-label="Grupos Específicos">
+                <h2>Salud en Etapas de Vida</h2>
+                <img src="IMAGENES/SALUD.webp" alt="Familia cocinando juntos (padre, madre y niño con alimentos saludables).">
+                <div class="seccion__blog">
+                    <a href="salud-femenina/">
+                        <h3>Salud Femenina y Hormonal</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="salud-masculina/">
+                        <h3>Salud Masculina</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="ninos-adolescentes/">
+                        <h3>Niños y Adolescentes</h3>
+                    </a>
+                </div>
+            </section>
+
+            <section id="ciencia" aria-label="Ciencia y Actualidad">
+                <h2>Ciencia y Actualidad</h2>
+                <img src="IMAGENES/CIENTIFICOS.webp" alt="Investigadores en un laboratorio analizando datos o usando microscopios.">
+                <div class="seccion__blog">
+                    <a href="estudios-cientificos/">
+                        <h3>Estudios Científicos Recientes</h3>
+                    </a>
+                </div>
+                <div class="seccion__blog">
+                    <a href="mitos-y-verdades/">
+                            <h3>Mitos y Verdades</h3>
+                    </a>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="footer">

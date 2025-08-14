@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog de Salud | Calculadora IMC</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ruyman Barbuzano Bethencourt">
+
+    <meta name="google-site-verification" content="np5JnMIK_DIqWDdBjxSXYgH0g4u2kfDh2risprPD_LU" />
+    <meta name="google-analytics" content="cookie_flags=SameSite=Lax; Secure; Path=/">
+
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="stylesheet" href="../styles-articulos.css">
+
+     <!-- CookieConsent script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+
+    <!-- Script  con lógica de consentimiento -->
+    <script src="../../cookies-consent.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="../" class="home-link">
+           <span>Calculadora IMC</span>
+        </a> <!-- Nuevo enlace home -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li>
+                    <div class="selector-calculadoras">
+                        <button id="btn-selector">Calculadoras ▼</button>
+                        <div class="dropdown-menu">
+                            <a id="calc-op" href="../../">IMC para adultos</a>
+                            <a id="calc-op" href="../../imc-ninos-adolescentes/">IMC < 18 años</a>
+                            <a id="calc-op" href="../../peso-ideal/">Peso Ideal</a>
+                            <a id="calc-op" href="../../grasa-corporal/">Grasa corporal</a>
+                            <a id="calc-op" href="../../tasa-metabolica-basal/">TMB</a>
+                            <a id="calc-op" href="../../calorias-diarias/">Calorias Diarias</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><input type="text" placeholder="Búscar en el blog..."></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Artículos sobre Estudios Científicos Recientes</h1>
+
+        <div class="articulo">
+            <a href="avances-nutricion-deportiva/">
+                <img src="cintificos.webp" alt="Científicos en laboratorio analizando muestras biológicas">
+                <div class="articulo--text">
+                    <h2>Los últimos avances en nutrición deportiva: ¿Qué dice la ciencia?</h2>
+                    <p>Revisión de las investigaciones más recientes sobre suplementación, timing nutricional y adaptaciones metabólicas en atletas. Incluye datos sobre nuevos protocolos de hidratación y recuperación muscular avalados por estudios de 2023-2024.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="articulo">
+            <a href="microbiota-intestinal/">
+                <img src="intestino.webp" alt="Infografía del eje intestino-cerebro con iconos de bacterias beneficiosas">
+                <div class="articulo--text">
+                    <h2>Microbiota intestinal y rendimiento cognitivo: Hallazgos revolucionarios</h2>
+                    <p>Análisis de cómo ciertas cepas bacterianas mejoran la memoria y concentración, con aplicaciones prácticas para estudiantes y profesionales. Incluye alimentos y probióticos específicos.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="articulo">
+            <a href="verdad-ayuno-intermitente/">
+                <img src="ayuno.webp" alt="Reloj con ventanas de alimentación/ayuno superpuestas">
+                <div class="articulo--text">
+                    <h2>La verdad sobre el ayuno intermitente: Nuevas evidencias en 2024</h2>
+                    <p>Metaanálisis de estudios recientes que comparan protocolos 16/8 vs. 5:2, sus efectos en longevidad celular y controversias en mujeres.</p>
+                </div>
+            </a>
+        </div>
+                
+        <div class="articulo">
+            <a href="tecnologia-wearable/">
+                <img src="portatil.webp" alt="Colección de dispositivos portátiles con gráficos de datos">
+                <div class="articulo--text">
+                    <h2>Tecnología wearable en salud: Precisiones y limitaciones según la ciencia</h2>
+                    <p>Evaluación crítica de pulseras y smartwatches para medir sueño, estrés y calorías. Datos sobre margen de error en diferentes marcas.</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Calculadora IMC.</p>
+        <p> 
+            <a href="aviso-legal/">Aviso legal</a> | 
+            <a href="politica-privacidad/">Política de privacidad</a> | 
+            <a href="mailto:ruymanbarbuzano200@gmail.com" id="contacto">Contacto</a>
+        </p>
+    </footer>
+</body>
+</html>

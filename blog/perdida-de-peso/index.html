@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog de Salud | Calculadora IMC</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ruyman Barbuzano Bethencourt">
+
+    <meta name="google-site-verification" content="np5JnMIK_DIqWDdBjxSXYgH0g4u2kfDh2risprPD_LU" />
+    <meta name="google-analytics" content="cookie_flags=SameSite=Lax; Secure; Path=/">
+
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="stylesheet" href="../styles-articulos.css">
+
+     <!-- CookieConsent script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+
+    <!-- Script  con lógica de consentimiento -->
+    <script src="../../cookies-consent.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="../" class="home-link">
+           <span>Calculadora IMC</span>
+        </a> <!-- Nuevo enlace home -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li>
+                    <div class="selector-calculadoras">
+                        <button id="btn-selector">Calculadoras ▼</button>
+                        <div class="dropdown-menu">
+                            <a id="calc-op" href="../../">IMC para adultos</a>
+                            <a id="calc-op" href="../../imc-ninos-adolescentes/">IMC < 18 años</a>
+                            <a id="calc-op" href="../../peso-ideal/">Peso Ideal</a>
+                            <a id="calc-op" href="../../grasa-corporal/">Grasa corporal</a>
+                            <a id="calc-op" href="../../tasa-metabolica-basal/">TMB</a>
+                            <a id="calc-op" href="../../calorias-diarias/">Calorias Diarias</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><input type="text" placeholder="Búscar en el blog..."></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Artículos sobre Pérdida de Peso Saludable</h1>
+        
+        <div class="articulo">
+            <a href="dietas-milagro-perdida-de-peso/">
+                <img src="quemagrasas.webp" alt="Báscula rodeada de alimentos sanos vs. pastillas 'quemagrasas'.">
+                <div class="articulo--text">
+                    <h2>Dietas 'milagro' vs. pérdida de peso real: Lo que dice la ciencia</h2>
+                    <p>Detox, keto, ayunos extremos... Analizamos por qué estas dietas fracasan a largo plazo y te damos un plan sostenible basado en estudios (sin contar calorías).</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="articulo">
+            <a href="plan-12-semanas/">
+                <img src="calendario.webp" alt="Calendario con comidas y rutinas de ejercicio.">
+                <div class="articulo--text">
+                    <h2>Plan de 12 semanas para perder grasa sin efecto rebote</h2>
+                    <p>*Pierde 0.5-1 kg por semana sin pasar hambre: menús semanales descargables, progresión de ejercicios y cómo ajustar las calorías según tu evolución.*</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="articulo">
+            <a href="ansiedad-para-comer/">
+                <img src="fruta-dulces.webp" alt="Manos sosteniendo un tazón de frutas vs. dulces.">
+                <div class="articulo--text">
+                    <h2>Ansiedad por comer: Técnicas para controlarla</h2>
+                    <p>¿Picoteas sin hambre? Descubre si es ansiedad emocional o deficiencia nutricional. Técnicas de mindfulness y los 10 alimentos que más sacian (con recetas).</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="articulo">
+            <a href="perdida-de-peso-mensual/">
+                <img src="perdida.webp" alt="Gráfico de pérdida de peso progresiva.">
+                <div class="articulo--text">
+                    <h2>¿Cuánto peso perder por mes es saludable?</h2>
+                    <p>*Perder más de 1 kg/semana puede dañar tu metabolismo. Te explicamos cómo calcular tu déficit calórico ideal y evitar el temido "efecto yo-yó".*</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Calculadora IMC.</p>
+        <p> 
+            <a href="aviso-legal/">Aviso legal</a> | 
+            <a href="politica-privacidad/">Política de privacidad</a> | 
+            <a href="mailto:ruymanbarbuzano200@gmail.com" id="contacto">Contacto</a>
+        </p>
+    </footer>
+</body>
+</html>

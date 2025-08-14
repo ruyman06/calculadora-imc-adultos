@@ -30,6 +30,11 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
     z-index: 1000;
 }
 
+.nav__list {
+    margin-left: 0;
+    padding-left: 0;
+}
+
 .nav__list li {
     display: inline-block;
     margin-right: 25px;

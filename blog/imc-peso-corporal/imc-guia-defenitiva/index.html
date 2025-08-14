@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IMC: Guía Científica Completa desde Cálculo hasta Interpretación</title>
+    <meta name="description" content="Todo sobre el Índice de Masa Corporal: fórmulas precisas, rangos de salud, limitaciones en atletas y herramientas avanzadas complementarias.">
+    <meta name="keywords" content="cálculo IMC, rangos IMC, IMC atletas, limitaciones IMC, calculadora IMC avanzada">
+    <meta name="author" content="Ruyman Barbuzano Bethencourt">
+
+    <meta name="google-site-verification" content="np5JnMIK_DIqWDdBjxSXYgH0g4u2kfDh2risprPD_LU" />
+    <meta name="google-analytics" content="cookie_flags=SameSite=Lax; Secure; Path=/">
+
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico" />
+    <link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+    <link rel="stylesheet" href="../../styles-texto.css">
+
+     <!-- CookieConsent script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+
+    <!-- Script  con lógica de consentimiento -->
+    <script src="../../../cookies-consent.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href=".../../" class="home-link">
+           <span>Calculadora IMC</span>
+        </a> <!-- Nuevo enlace home -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li>
+                    <div class="selector-calculadoras">
+                        <button id="btn-selector">Calculadoras ▼</button>
+                        <div class="dropdown-menu">
+                            <a id="calc-op" href="../../../">IMC para adultos</a>
+                            <a id="calc-op" href="../../../imc-ninos-adolescentes/">IMC < 18 años</a>
+                            <a id="calc-op" href="../../../peso-ideal/">Peso Ideal</a>
+                            <a id="calc-op" href="../../../grasa-corporal/">Grasa corporal</a>
+                            <a id="calc-op" href="../../../tasa-metabolica-basal/">TMB</a>
+                            <a id="calc-op" href="../../../calorias-diarias/">Calorias Diarias</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../../">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><input type="text" placeholder="Búscar en el blog..."></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>IMC: La guía definitiva para entender tus resultados</h1>
+
+        <h2>Cálculo preciso y metodología científica</h2>
+
+        <p class="parrafo">
+            El Índice de Masa Corporal (IMC) se calcula mediante una fórmula matemática simple (peso en kg dividido por la altura en metros al cuadrado), pero su interpretación requiere comprender los principios epidemiológicos en los que se basa. Desarrollado por el estadístico Adolphe Quetelet en el siglo XIX, este índice fue adoptado por la OMS en 1995 como estándar internacional después de estudios masivos que demostraron su correlación (r=0.7-0.8) con problemas de salud crónicos. Los rangos establecidos (bajo peso <18.5, normal 18.5-24.9, sobrepeso 25-29.9, obesidad ≥30) provienen de análisis de morbilidad y mortalidad en poblaciones de millones de personas, mostrando que cada aumento de 5 unidades en IMC se asocia con un 31% mayor riesgo cardiovascular según el estudio INTERHEART.
+        </p>
+
+        <div class="imagenes">
+            <p>
+                Sin embargo, la calculadora estándar falla en considerar variables cruciales como densidad ósea (los individuos con osteoporosis pueden subestimar su grasa corporal en un 3-5%) o hidratación (la retención de líquidos puede aumentar artificialmente el IMC). Las nuevas versiones interactivas incorporan ajustes por edad y etnia - por ejemplo, los asiáticos tienen mayor riesgo metabólico en IMC más bajos, por lo que la OMS sugiere umbrales modificados (sobrepeso ≥23, obesidad ≥27.5) para estas poblaciones.
+            </p>
+
+            <img src="../../IMAGENES/IMC.webp" alt="Persona midiendo su cintura con cinta métrica">
+        </div>
+
+        <h2>Limitaciones en poblaciones especiales</h2>
+
+        <p class="parrafo">
+            Los atletas profesionales representan el caso más evidente de las limitaciones del IMC. Un culturista de 1.80m y 95kg (IMC=29.3, técnicamente "sobrepeso") puede tener solo 8% grasa corporal, mientras que una persona sedentaria con las mismas medidas podría tener 30% grasa. Esto ocurre porque el IMC no distingue entre masa muscular y grasa - un kilogramo de músculo ocupa un 18% menos volumen que un kilo de grasa pero pesa igual. Estudios con jugadores de la NFL muestran que el 56% serían clasificados como "obesos" por IMC, a pesar de tener porcentajes grasos óptimos.
+        </p>
+
+        <p class="parrafo">
+            Otras excepciones importantes incluyen:
+        </p>
+
+        <ul>
+            <li>Adultos mayores: La sarcopenia relacionada con la edad reduce masa muscular, subestimando riesgos</li>
+            <li>Amputados: Requieren fórmulas ajustadas (como el método de cálculo por segmentos)</li>
+            <li>Embarazadas: El aumento de peso gestacional distorsiona las mediciones</li>
+        </ul>
+
+        <h2>Interpretación clínica y riesgos asociados</h2>
+
+        <p class="parrafo">
+            Cada categoría de IMC conlleva implicaciones médicas específicas. El rango "normal" (18.5-24.9) muestra la menor incidencia de comorbilidades, pero estudios longitudinales revelan que el punto óptimo varía por edad: 22-23 en adultos jóvenes versus 24-26 en mayores de 65 años, donde un ligero exceso parece protector contra la osteoporosis. La obesidad clase III (IMC ≥40) reduce la esperanza de vida en 6-7 años, comparable al tabaquismo crónico, según el estudio PLCO Cancer Screening Trial.
+        </p>
+
+        <p class="parrafo">
+            Los riesgos no son lineales: el incremento de mortalidad es exponencial a partir de IMC=27, con cada unidad adicional aumentando un 8-10% el riesgo de diabetes tipo 2. Las nuevas directrices médicas recomiendan intervención temprana al superar IMC=25 si coexisten factores como:
+        </p>
+
+        <ul>
+            <li>Circunferencia de cintura >102cm (hombres) o >88cm (mujeres)</li>
+            <li>Triglicéridos ≥150 mg/dL</li>
+            <li>HDL <40 mg/dL (hombres) o <50 mg/dL (mujeres)</li>
+        </ul>
+
+        <h2>Herramientas complementarias de evaluación</h2>
+
+        <p class="parrafo">
+           Para superar las limitaciones del IMC, los profesionales utilizan protocolos integrados:
+        </p>
+
+        <ol>
+            <li><span class="bold--text">Bioimpedancia vectorial:</span> Analiza composición corporal mediante resistencia eléctrica, diferenciando masa magra/grasa/agua</li>
+            <li><span class="bold--text">DEXA:</span> Considerado "gold standard", mide densidad ósea y distribución grasa con precisión de ±1.5%</li>
+            <li><span class="bold--text">Relación cintura-altura:</span> Más predictiva que IMC para riesgo cardiometabólico (umbral saludable <0.5)</li>
+            <li><span class="bold--text">Análisis de pliegues cutáneos:</span> Método de 7 puntos con caliper, con 90-95% correlación con DEXA cuando lo realiza experto</li>
+        </ol>
+
+        <p class="parrafo">
+            Las calculadoras avanzadas ahora combinan IMC con estos parámetros, generando perfiles de riesgo personalizados. La app "BodyScore" de la Clínica Mayo integra 12 indicadores para una evaluación integral.
+        </p>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Calculadora IMC.</p>
+        <p> 
+            <a href="aviso-legal/">Aviso legal</a> | 
+            <a href="politica-privacidad/">Política de privacidad</a> | 
+            <a href="mailto:ruymanbarbuzano200@gmail.com" id="contacto">Contacto</a>
+        </p>
+    </footer>
+</body>
+</html>

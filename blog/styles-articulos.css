@@ -30,13 +30,19 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
     z-index: 1000;
 }
 
+.nav__list {
+    margin-left: 0;
+    padding-left: 0;
+}
+
 .nav__list li {
     display: inline-block;
     margin-right: 25px;
     border-radius: 6px;
+    padding: 9.5px 0;
 }
 
-.nav__list li a, #btn-selector{
+.nav__list li a, #btn-selector {
     text-decoration: none;
     color: #212121;
     font-size: 16px;
@@ -48,6 +54,26 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
     transition: padding 0.3s;
     border: none;
     cursor: pointer;
+}
+
+.nav__list input {
+    font-size: 15px;
+    background-color: transparent;
+    border: 2px solid #99baf78e;
+    padding: 5px 13px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #0003;
+    outline: none;
+    transition: border 0.5s, background-color 0.5s;
+}
+
+.nav__list input::placeholder {
+    color: #000;
+}
+
+.nav__list input:focus {
+    border-color: rgba(212, 220, 236, 0.557);
+    background-color: #5894d1;
 }
 
 .nav__list li a:hover{
@@ -107,8 +133,9 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
 .container {
     min-height: 100vh;
     display: flex;
+    gap: 20px;
     flex-flow: column wrap;
-    padding: 30px 30px 40px 50px;
+    padding: 30px 50px 40px 50px;
     max-width: 1000px;
     background-color: #FAFAFA;
     margin: auto;
@@ -118,23 +145,84 @@ body, div, h1, h2, p, select, form, label, input, table, details, summary {
 h1 {
     color: #212121;
     margin-top: 5px;
+    text-align: center;
+    padding-bottom: 10px;
+    position: relative;
 }
 
-p {
-    text-wrap: balance;
-    margin-bottom: 40px;
-    margin-top: 10px;
-    max-width: 100%;
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 4px;
+    background: linear-gradient(90deg, #1976D2 0%, #4A89DC 100%);
+    border-radius: 2px;
 }
 
 h2 {
-    margin-top: 30px;
+    margin-top: 20px;
     color: #212121
 }
 
 h3 {
-    margin-top: 0;
+    margin: 5px 0;
     color: #212121
+}
+
+
+.articulo {
+    max-width: 100%;
+    padding: 15px 17px;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    transition: all 0.4s ease;
+    background: linear-gradient(to right, #fff 30%, #dcdcdc);
+    box-shadow: 0 5px 10px #0003;
+}
+
+.articulo:hover {
+    transform: translateY(-3px);
+}
+
+.articulo a {
+    text-decoration: none;
+    display: flex;
+    gap: 25px;
+    flex-flow: row wrap;
+}
+
+.articulo img {
+    max-width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 250px;
+    flex: 0 0 auto;
+}
+
+.articulo--text {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 300px;
+    justify-content: center;
+}
+
+.articulo h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.articulo p {
+    font-size: 15px;
+    color: #000;
+    text-wrap: balance;
+    margin-top: 5px;
+    max-width: 100%;
 }
 
 .footer {
@@ -193,18 +281,9 @@ h3 {
         padding: 1rem;
     }
 
-    .resultado {
-        width: 100%;
-    }
-
     p {
         max-width: 100%;
         margin: 0;
         text-wrap: balance;
-    }
-    
-    details {
-        width: 100%;
-        padding: 15px;
     }
 }
