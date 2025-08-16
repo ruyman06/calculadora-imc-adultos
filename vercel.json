@@ -18,5 +18,13 @@
         }
       ]
     }
+  ],
+
+  "redirects": [
+    {
+      "source": "/ads.txt",
+      "destination": "https://srv.adstxtmanager.com/TU_ID_DE_EZOIC/tudominio.com",
+      "permanent": true
+    }
   ]
 }
